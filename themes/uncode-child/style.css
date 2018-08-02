@@ -1,0 +1,130 @@
+/*
+Theme Name: Uncode Child
+Description: Child theme for Uncode theme
+Author: Undsgn™
+Author URI: http://www.undsgn.com
+Template: uncode
+Version: 1.0.0
+Text Domain: uncode
+*/
+
+#bar-fixed-bottom{
+    position: fixed;
+    background: #000; 
+    bottom: 0px; 
+    color:#fff; 
+    font-family: Arial, Helvetica, sans-serif; 
+    width:100%; 
+    z-index:99999;
+    opacity: 0.95; 
+    font-weight: bold;
+}
+
+#bar-fixed-bottom>.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#bar-fixed-bottom>.row>.column-lg-4>h4{
+    margin-top: 15px;
+}
+
+.footer-scroll-top{
+    bottom: 12%;
+}
+
+footer .footer-last .add-class-footer{
+    margin-bottom: 5%;
+}
+
+.form-champ{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulaire-champs{
+    background-color: red;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 12% 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button-btn {
+    background-color: white; /* Green */
+    border: 1px solid blue;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 12% 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.button-btn:checked{
+    border: 1px solid blue;
+}
+
+input[type=radio]{
+    display: none !important;
+}
+input[type=radio]+label{
+    background-color: white; /* Green */
+    border: 1px solid #80808052;
+    color: black;
+    padding: 20px 40px !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 12% 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.gform_wrapper .gfield_radio li label {
+    max-width: inherit !important;
+}
+
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {  
+    border-color: blue;
+}
+
+span.ginput_price{
+    display: none;
+}
+
+.gfield_radio{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column-reverse; */
+}
+
+div.quantity{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.product_totals{
+    display: flex;
+    justify-content: center;
+}
+
+.screen-reader-text {
+    display: contents;
+}
