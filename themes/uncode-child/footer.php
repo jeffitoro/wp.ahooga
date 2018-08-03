@@ -179,11 +179,18 @@ wp_footer(); ?>
 			<ul id="description"></ul>
 		</div>
 		<div class="column-lg-4">
+			<h4>Call Support</h4>
+			<h6>0412356498</h5>
+		</div>
+		<div class="column-lg-4">
+			<h4>Shipping</h4>
+			<h6>2-3 days</h5>
+		</div>
+		<div class="column-lg-4">
 			<h4>Price Total</h4>
 			<p id="total" style="text-align:center"></p>
 		</div>
 		<div class="column-lg-4">
-			<h4>Buy</h4>
 			<button class="button" id="btn-add">Add to cart</button>
 		</div>
 	</div>

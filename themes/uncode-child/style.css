@@ -10,14 +10,16 @@ Text Domain: uncode
 
 #bar-fixed-bottom{
     position: fixed;
-    background: #000; 
+    outline-color: #eaeaea;
+    background-color: #DFDCE3; 
     bottom: 0px; 
-    color:#fff; 
+    color:black; 
     font-family: Arial, Helvetica, sans-serif; 
     width:100%; 
     z-index:99999;
     opacity: 0.95; 
     font-weight: bold;
+    padding: 10px;
 }
 
 #bar-fixed-bottom>.row{
@@ -47,7 +49,7 @@ footer .footer-last .add-class-footer{
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color:black; /* Green */
     border: none;
     color: white;
     padding: 20px;
@@ -93,12 +95,14 @@ input[type=radio]+label{
     font-size: 16px;
     margin: 12% 2px;
     cursor: pointer;
-    border-radius: 8px;
-    width: 100%;
+    border-radius: 4px;
+    width: 98% !important;
 }
 
 .gform_wrapper .gfield_radio li label {
     max-width: inherit !important;
+    display: flex !important;
+    justify-content: space-between;
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {  
@@ -106,13 +110,13 @@ input[type=radio]+label{
 }
 
 span.ginput_price{
-    display: none;
+    /* display: none; */
 }
 
 .gfield_radio{
     display: flex;
-    justify-content: center;
-    /* flex-direction: column-reverse; */
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 div.quantity{
@@ -127,4 +131,8 @@ div.product_totals{
 
 .screen-reader-text {
     display: contents;
+}
+
+.gfield_label{
+    color: black;
 }
