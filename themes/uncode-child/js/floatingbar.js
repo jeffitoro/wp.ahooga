@@ -50,25 +50,6 @@ jQuery(document).ready(function () {
                     }
                 });
 
-                var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;
-                var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");
-                if (this.parentElement.querySelector("label")==null) {
-                    label = document.querySelector(".image-choices-choice-text").innerHTML;
-                } else {   
-                    label = this.parentElement.querySelector("label").innerText;
-                }
-                var otherindex=1;
-                for (let index = 0; index < selection.length; index++) {
-                    console.log(selection[index].label +" : "+label+" index: "+index    );
-                    if(selection[index].label==label){
-                        console.log("object");
-                        otherindex = index;
-                    }
-                }
-                console.log(otherindex);
-                console.log(selection.options);
-                selection.options[otherindex].selected = true;
-                fireEvent(selection,'change');
 
                 var parentdescription = document.querySelector("#description").parentElement;
                 parentdescription.removeChild(parentdescription.lastElementChild);
@@ -126,6 +107,7 @@ jQuery(document).ready(function () {
                 0, 0, 0, 0,
                 false, false, false, false,
                 0, null);
+            console.log(btnDefault);
             btnDefault.dispatchEvent(mEvent);
         })
         
@@ -148,27 +130,6 @@ jQuery(document).ready(function () {
             })
         }
 
-        //hide other form for produit
-        document.querySelectorAll("select[id^='pa_']").forEach(function (ele) {
-            console.log(ele.id);
-            if(ele.id != "pa_color"){
-                ele.parentElement.parentElement.setAttribute("style","display:none");        
-            }
-        })
-
-        function fireEvent(element,event){
-            if (document.createEventObject){
-            // dispatch for IE
-            var evt = document.createEventObject();
-            return element.fireEvent('on'+event,evt)
-            }
-            else{
-            // dispatch for firefox + others
-            var evt = document.createEvent("HTMLEvents");
-            evt.initEvent(event, true, true ); // event type,bubbling,cancelable
-            return !element.dispatchEvent(evt);
-            }
-        }
 
     }
 })
