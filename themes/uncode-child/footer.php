@@ -188,7 +188,7 @@ wp_footer(); ?>
 		</div>
 		<div class="column-lg-4">
 			<h4>Price Total</h4>
-			<p id="total" style="text-align:center"></p>
+			<p id="total" style=""></p>
 		</div>
 		<div class="column-lg-4">
 			<button class="button" id="btn-add">Add to cart</button>
