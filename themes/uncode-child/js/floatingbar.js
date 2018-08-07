@@ -1,5 +1,4 @@
-(
-    function ($) {
+(function ($) {
         this.randomtip = function () {
             var length = $("#bar-fixed-bottom").length;
             var ran = Math.floor(Math.random() * length) + 1;
@@ -25,32 +24,32 @@ jQuery(document).ready(function () {
         var title = $(".uncont>.product_title.entry-title").html();
 
         //get desciption
-        var description = document.querySelector("#description");
-	if(description != null){
+        if(document.querySelector("#description") != null){
+            var description = document.querySelector("#description");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(title));
+            description.appendChild(li);
+        }
 
-        	var li = document.createElement("li");
-        	li.appendChild(document.createTextNode(title));
-        	description.appendChild(li);
-
-        	var produits = document.querySelectorAll("input[id^='choice_']");
-        	produits.forEach(function (produit) {
-            	produit.addEventListener("click", function (event) {
-                	var tabElementsProduct = [];
-                	tabElementsProduct.push(title);
-                	produits.forEach(function (self) {
-                    		if (self.checked) {
-                        		console.log("checked");
-                        		var label = self.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerHTML;
-                        		label += ": ";
-                        		if(document.querySelector(".image-choices-choice-text")!=null){
-                            			label += document.querySelector(".image-choices-choice-text").innerHTML;
-                        		}else{
-                            			let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
-                            			label += doc.body.firstChild.textContent;
-                        		}
-                        		tabElementsProduct.push(label);
-                    		}
-                	});
+        var produits = document.querySelectorAll("input[id^='choice_']");
+        produits.forEach(function (produit) {
+            produit.addEventListener("click", function (event) {
+                var tabElementsProduct = [];
+                tabElementsProduct.push(title);
+                produits.forEach(function (self) {
+                    if (self.checked) {
+                        console.log("checked");
+                        var label = self.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerHTML;
+                        label += ": ";
+                        if(document.querySelector(".image-choices-choice-text")!=null){
+                            label += document.querySelector(".image-choices-choice-text").innerHTML;
+                        }else{
+                            let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
+                            label += doc.body.firstChild.textContent;
+                        }
+                        tabElementsProduct.push(label);
+                    }
+                });
 
                 var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;	
                 var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");	
@@ -71,26 +70,26 @@ jQuery(document).ready(function () {
                 console.log(selection.options);	
                 selection.options[otherindex].selected = true;	
                 fireEvent(selection,'change');
-		if(document.querySelector("#description")!=null){
-                	parentdescription.removeChild(parentdescription.lastElementChild);
-               	 	var ul = document.createElement("ul");
-                	ul.setAttribute("id", "description");
-                	parentdescription.appendChild(ul);
-               		 var i = 0;
-                	tabElementsProduct.forEach(function (ele) {
-                	    var span = document.createElement("span");
-                	    var em = document.createElement("em");
-               		    console.log(ele);
-                	    if(i!=0){
-               	 	        em.appendChild(document.createTextNode(", "+ele));
-                 	   }else{
-                 	       em.appendChild(document.createTextNode(ele));
-                 	   }
-                 	   span.appendChild(em);
-                 	   document.querySelector("#description").appendChild(span);
-                 	   i++
-                	})
-		}	
+
+                var parentdescription = document.querySelector("#description").parentElement;
+                parentdescription.removeChild(parentdescription.lastElementChild);
+                var ul = document.createElement("ul");
+                ul.setAttribute("id", "description");
+                parentdescription.appendChild(ul);
+                var i = 0;
+                tabElementsProduct.forEach(function (ele) {
+                    var span = document.createElement("span");
+                    var em = document.createElement("em");
+                    console.log(ele);
+                    if(i!=0){
+                        em.appendChild(document.createTextNode(", "+ele));
+                    }else{
+                        em.appendChild(document.createTextNode(ele));
+                    }
+                    span.appendChild(em);
+                    document.querySelector("#description").appendChild(span);
+                    i++
+                })
                 setTimeout(() => {
                     var fields = document.querySelectorAll("ul[id^='gform_totals_']")[0].querySelector(".formattedTotalPrice.ginput_total").textContent;
                     var parentdescription = document.querySelector("#total").parentElement;
@@ -174,5 +173,17 @@ jQuery(document).ready(function () {
 
         var parent = document.querySelector(".product_totals").parentNode;
         parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"),document.querySelector(".product_totals"));
+
+        // class="nav nav-tabs limit-width single-h-padding"
+        // <li class="additional_information_tab active" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
+		// 			<a href="#tab-additional_information-73472" data-toggle="tab"><span>Informations complémentaires</span></a>
+		// 		</li>
+        var navtabs = document.querySelector(".nav-tabs");
+        var li_nav = document.createElement("li");
+        var span = document.createElement("span");
+        // span.appendChild(document.cre)
+        li_nav.setAttribute("class","additional_information_tab");
+        navtabs.appendChild(li_nav);
+        console.log(navtabs);
     }
 })
