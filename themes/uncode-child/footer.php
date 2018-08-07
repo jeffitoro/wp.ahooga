@@ -175,10 +175,6 @@ wp_footer(); ?>
 <div id="bar-fixed-bottom" style="display:none">
 	<div class="row">
 		<div class="column-lg-4">
-			<h4>Description</h4>
-			<ul id="description"></ul>
-		</div>
-		<div class="column-lg-4">
 			<h4>Call Support</h4>
 			<h6>0412356498</h5>
 		</div>

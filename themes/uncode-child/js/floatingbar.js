@@ -26,29 +26,31 @@ jQuery(document).ready(function () {
 
         //get desciption
         var description = document.querySelector("#description");
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(title));
-        description.appendChild(li);
+	if(description != null){
 
-        var produits = document.querySelectorAll("input[id^='choice_']");
-        produits.forEach(function (produit) {
-            produit.addEventListener("click", function (event) {
-                var tabElementsProduct = [];
-                tabElementsProduct.push(title);
-                produits.forEach(function (self) {
-                    if (self.checked) {
-                        console.log("checked");
-                        var label = self.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerHTML;
-                        label += ": ";
-                        if(document.querySelector(".image-choices-choice-text")!=null){
-                            label += document.querySelector(".image-choices-choice-text").innerHTML;
-                        }else{
-                            let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
-                            label += doc.body.firstChild.textContent;
-                        }
-                        tabElementsProduct.push(label);
-                    }
-                });
+        	var li = document.createElement("li");
+        	li.appendChild(document.createTextNode(title));
+        	description.appendChild(li);
+
+        	var produits = document.querySelectorAll("input[id^='choice_']");
+        	produits.forEach(function (produit) {
+            	produit.addEventListener("click", function (event) {
+                	var tabElementsProduct = [];
+                	tabElementsProduct.push(title);
+                	produits.forEach(function (self) {
+                    		if (self.checked) {
+                        		console.log("checked");
+                        		var label = self.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerHTML;
+                        		label += ": ";
+                        		if(document.querySelector(".image-choices-choice-text")!=null){
+                            			label += document.querySelector(".image-choices-choice-text").innerHTML;
+                        		}else{
+                            			let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
+                            			label += doc.body.firstChild.textContent;
+                        		}
+                        		tabElementsProduct.push(label);
+                    		}
+                	});
 
                 var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;	
                 var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");	
@@ -69,26 +71,26 @@ jQuery(document).ready(function () {
                 console.log(selection.options);	
                 selection.options[otherindex].selected = true;	
                 fireEvent(selection,'change');
-
-                var parentdescription = document.querySelector("#description").parentElement;
-                parentdescription.removeChild(parentdescription.lastElementChild);
-                var ul = document.createElement("ul");
-                ul.setAttribute("id", "description");
-                parentdescription.appendChild(ul);
-                var i = 0;
-                tabElementsProduct.forEach(function (ele) {
-                    var span = document.createElement("span");
-                    var em = document.createElement("em");
-                    console.log(ele);
-                    if(i!=0){
-                        em.appendChild(document.createTextNode(", "+ele));
-                    }else{
-                        em.appendChild(document.createTextNode(ele));
-                    }
-                    span.appendChild(em);
-                    document.querySelector("#description").appendChild(span);
-                    i++
-                })
+		if(document.querySelector("#description")!=null){
+                	parentdescription.removeChild(parentdescription.lastElementChild);
+               	 	var ul = document.createElement("ul");
+                	ul.setAttribute("id", "description");
+                	parentdescription.appendChild(ul);
+               		 var i = 0;
+                	tabElementsProduct.forEach(function (ele) {
+                	    var span = document.createElement("span");
+                	    var em = document.createElement("em");
+               		    console.log(ele);
+                	    if(i!=0){
+               	 	        em.appendChild(document.createTextNode(", "+ele));
+                 	   }else{
+                 	       em.appendChild(document.createTextNode(ele));
+                 	   }
+                 	   span.appendChild(em);
+                 	   document.querySelector("#description").appendChild(span);
+                 	   i++
+                	})
+		}	
                 setTimeout(() => {
                     var fields = document.querySelectorAll("ul[id^='gform_totals_']")[0].querySelector(".formattedTotalPrice.ginput_total").textContent;
                     var parentdescription = document.querySelector("#total").parentElement;
