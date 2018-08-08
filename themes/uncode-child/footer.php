@@ -183,8 +183,7 @@ wp_footer(); ?>
 			<h6>2-3 days</h5>
 		</div>
 		<div class="column-lg-4">
-			<h4>Price Total</h4>
-			<p id="total" style=""></p>
+			<p id="total" style="font-size:50px"></p>
 		</div>
 		<div class="column-lg-4">
 			<button class="button" id="btn-add">Add to cart</button>
