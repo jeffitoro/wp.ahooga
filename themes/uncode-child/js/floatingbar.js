@@ -50,26 +50,29 @@ jQuery(document).ready(function () {
                         tabElementsProduct.push(label);
                     }
                 });
-
+                console.log(this);
                 var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;	
-                var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");	
-                if (this.parentElement.querySelector("label")==null) {	
-                    label = document.querySelector(".image-choices-choice-text").innerHTML;	
-                } else {   	
-                    label = this.parentElement.querySelector("label").innerText;	
-                }	
-                var otherindex=1;	
-                for (let index = 0; index < selection.length; index++) {	
-                    console.log(selection[index].label +" : "+label+" index: "+index    );	
-                    if(selection[index].label==label){	
-                        console.log("object");	
-                        otherindex = index;	
+                console.log(label);
+                var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");
+                if(selection!=null){
+                    if (this.parentElement.querySelector("label")==null) {	
+                        label = document.querySelector(".image-choices-choice-text").innerHTML;	
+                    } else {   	
+                        label = this.parentElement.querySelector("label").innerText;	
                     }	
+                    var otherindex=1;	
+                    for (let index = 0; index < selection.length; index++) {	
+                        console.log(selection[index].label +" : "+label+" index: "+index    );	
+                        if(selection[index].label==label){	
+                            console.log("object");	
+                            otherindex = index;	
+                        }	
+                    }	
+                    console.log(otherindex);	
+                    console.log(selection.options);	
+                    selection.options[otherindex].selected = true;	
+                    fireEvent(selection,'change');
                 }	
-                console.log(otherindex);	
-                console.log(selection.options);	
-                selection.options[otherindex].selected = true;	
-                fireEvent(selection,'change');
                 if(document.querySelector("#description")!=null){
                     var parentdescription = document.querySelector("#description").parentElement;
                     parentdescription.removeChild(parentdescription.lastElementChild);
@@ -113,6 +116,19 @@ jQuery(document).ready(function () {
                 document.querySelector("#total").appendChild(document.createTextNode(fields));
             }
         }, 2000);
+
+        var selection = document.querySelector("select[id='pa_engine']");		
+        var otherindex=1;	
+        for (let index = 0; index < selection.length; index++) {	
+            if(selection[index].label=="Your Legs" || selection[index].label=="Hybrid 24v"){	
+                otherindex = index;	
+            }	
+        }
+        selection.options[otherindex].selected = true;
+        fireEvent(selection,'change');
+        console.log(document.querySelector("#total"));
+        console.log("ici");
+
 
         var btnDefault;
         if(document.querySelector("button[name^='add-to-cart']")!= null){
@@ -177,9 +193,6 @@ jQuery(document).ready(function () {
         var parent = document.querySelector(".product_totals").parentNode;
         parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"),document.querySelector(".product_totals"));
 
-        // class="nav nav-tabs limit-width single-h-padding"
-        // <li class="additional_information_tab active" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
-		// 			<a href="#tab-additional_information-73472" data-toggle="tab"><span>Informations complémentaires</span></a>
         var content = document.querySelector(".tab-content");
         var tab_pane = document.createElement("div");
         tab_pane.setAttribute("class","tab-pane fade limit-width single-h-padding");
@@ -190,21 +203,14 @@ jQuery(document).ready(function () {
         var navtabs = document.querySelector(".nav-tabs");
         var li_nav = document.createElement("li");
         var span = document.createElement("span");
-        // span.appendChild(document.cre)
         li_nav.setAttribute("class","additional_information_tab");
         li_nav.setAttribute("id","tab-title-additional_information");
         li_nav.setAttribute("role","tab");
         li_nav.setAttribute("aria-controls","tab-additional_information");
         li_nav.innerHTML = '<a href="#tab-technicals-73472" data-toggle="tab"><span>Technicals Specifications</span></a> ';
         navtabs.appendChild(li_nav);
-        console.log(navtabs);
 
         var price_top = document.querySelector("div.price-container>.price>.h2");
-        console.log(document.querySelectorAll(".gfield_radio li label")[0].innerHTML);
-        var label_price_first = document.querySelectorAll(".gfield_radio li label")[0];
-        console.log(label_price_first);
         price_top.textContent = "starting from 1269,00 €";
-        console.log(price_top.textContent);
-        console.log("price: "+price_top);
     }
 })
