@@ -1,5 +1,4 @@
-(
-    function ($) {
+(function ($) {
         this.randomtip = function () {
             var length = $("#bar-fixed-bottom").length;
             var ran = Math.floor(Math.random() * length) + 1;
@@ -71,6 +70,7 @@ jQuery(document).ready(function () {
                 console.log(selection.options);	
                 selection.options[otherindex].selected = true;	
                 fireEvent(selection,'change');
+<<<<<<< HEAD
                 if(document.querySelector("#description")!=null){
                     var parentdescription = document.querySelector("#description").parentElement;
                     parentdescription.removeChild(parentdescription.lastElementChild);
@@ -92,6 +92,28 @@ jQuery(document).ready(function () {
                         i++
                     })
                 }
+=======
+
+                var parentdescription = document.querySelector("#description").parentElement;
+                parentdescription.removeChild(parentdescription.lastElementChild);
+                var ul = document.createElement("ul");
+                ul.setAttribute("id", "description");
+                parentdescription.appendChild(ul);
+                var i = 0;
+                tabElementsProduct.forEach(function (ele) {
+                    var span = document.createElement("span");
+                    var em = document.createElement("em");
+                    console.log(ele);
+                    if(i!=0){
+                        em.appendChild(document.createTextNode(", "+ele));
+                    }else{
+                        em.appendChild(document.createTextNode(ele));
+                    }
+                    span.appendChild(em);
+                    document.querySelector("#description").appendChild(span);
+                    i++
+                })
+>>>>>>> 3a52ada9160be818be52ce8c9085367ec54a2323
                 setTimeout(() => {
                     var fields = document.querySelectorAll("ul[id^='gform_totals_']")[0].querySelector(".formattedTotalPrice.ginput_total").textContent;
                     var parentdescription = document.querySelector("#total").parentElement;
@@ -181,6 +203,7 @@ jQuery(document).ready(function () {
         // class="nav nav-tabs limit-width single-h-padding"
         // <li class="additional_information_tab active" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
 		// 			<a href="#tab-additional_information-73472" data-toggle="tab"><span>Informations complémentaires</span></a>
+<<<<<<< HEAD
         // 		</li>
         var content = document.querySelector(".tab-content");
         var tab_pane = document.createElement("div");
@@ -189,11 +212,15 @@ jQuery(document).ready(function () {
         tab_pane.appendChild(document.createTextNode("Jefferson"));
         content.appendChild(tab_pane);
        
+=======
+		// 		</li>
+>>>>>>> 3a52ada9160be818be52ce8c9085367ec54a2323
         var navtabs = document.querySelector(".nav-tabs");
         var li_nav = document.createElement("li");
         var span = document.createElement("span");
         // span.appendChild(document.cre)
         li_nav.setAttribute("class","additional_information_tab");
+<<<<<<< HEAD
         li_nav.setAttribute("id","tab-title-additional_information");
         li_nav.setAttribute("role","tab");
         li_nav.setAttribute("aria-controls","tab-additional_information");
@@ -208,5 +235,9 @@ jQuery(document).ready(function () {
         price_top.textContent = "starting from 1269,00 €";
         console.log(price_top.textContent);
         console.log("price: "+price_top);
+=======
+        navtabs.appendChild(li_nav);
+        console.log(navtabs);
+>>>>>>> 3a52ada9160be818be52ce8c9085367ec54a2323
     }
 })
