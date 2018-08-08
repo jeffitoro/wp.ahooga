@@ -12,9 +12,12 @@
 
 jQuery(document).ready(function () {
     var pageShop = $("article").html();
-
+    
     // if i'm not in page shop woocommerce then action
     if (pageShop == null) {
+        var price_top = document.querySelector("div.price-container>.price>.h2");
+        price_top.textContent = "starting from 1269,00 €";
+
         // show bar bottom
         $("#bar-fixed-bottom").show();
 
@@ -74,18 +77,18 @@ jQuery(document).ready(function () {
                     fireEvent(selection,'change');
                 }	
                 if(document.querySelector("#description")!=null){
-                    var parentdescription = document.querySelector("#description").parentElement;
-                    parentdescription.removeChild(parentdescription.lastElementChild);
-                    var ul = document.createElement("ul");
-                    ul.setAttribute("id", "description");
-                    parentdescription.appendChild(ul);
+                    document.querySelector("#description").remove();
+                    var tab_pane2 = document.createElement("div");
+                    tab_pane2.setAttribute("class","tab-pane fade limit-width single-h-padding active in");
+                    tab_pane2.setAttribute("id","description");
+                    document.querySelector(".tab-content").appendChild(tab_pane2);
                     var i = 0;
                     tabElementsProduct.forEach(function (ele) {
-                        var span = document.createElement("span");
+                        var span = document.createElement("li");
                         var em = document.createElement("em");
                         console.log(ele);
                         if(i!=0){
-                            em.appendChild(document.createTextNode(", "+ele));
+                            em.appendChild(document.createTextNode(ele));
                         }else{
                             em.appendChild(document.createTextNode(ele));
                         }
@@ -97,15 +100,8 @@ jQuery(document).ready(function () {
                 setTimeout(() => {
                     var fields = document.querySelectorAll("ul[id^='gform_totals_']")[0].querySelector(".formattedTotalPrice.ginput_total").textContent;
                     var parentdescription = document.querySelector("#total").parentElement;
-                    // parentdescription.removeChild(parentdescription.lastElementChild);
-                    // var p = document.createElement("p");
-                    // p.setAttribute("id", "total");
-                    // p.style.fontSize = "2em";
-                    // p.style.textAlign = "center";
-                    // parentdescription.appendChild(p);
                     var q = document.querySelectorAll("input[id^='quantity_']")[0].value;
                     document.querySelector("#total").textContent = parseInt(fields.split(' ').join(''))*parseInt(q)+",00 €";
-                    // document.querySelector("#total").appendChild(document.createTextNode(parseInt(fields.split(' ').join(''))*parseInt(q)+",00 €"));
                 }, 2000);
             })
         });
@@ -199,18 +195,42 @@ jQuery(document).ready(function () {
         tab_pane.setAttribute("id","tab-technicals-73472");
         tab_pane.appendChild(document.createTextNode("Jefferson"));
         content.appendChild(tab_pane);
+
+        var tab_pane2 = document.createElement("div");
+        tab_pane2.setAttribute("class","tab-pane fade limit-width single-h-padding active in");
+        tab_pane2.setAttribute("id","description");
+        content.appendChild(tab_pane2);
        
         var navtabs = document.querySelector(".nav-tabs");
         var li_nav = document.createElement("li");
-        var span = document.createElement("span");
         li_nav.setAttribute("class","additional_information_tab");
-        li_nav.setAttribute("id","tab-title-additional_information");
+        li_nav.setAttribute("id","tab-title-additional_information1");
         li_nav.setAttribute("role","tab");
-        li_nav.setAttribute("aria-controls","tab-additional_information");
+        li_nav.setAttribute("aria-controls","tab-additional_information1");
         li_nav.innerHTML = '<a href="#tab-technicals-73472" data-toggle="tab"><span>Technicals Specifications</span></a> ';
-        navtabs.appendChild(li_nav);
+        // navtabs.appendChild(li_nav);
 
-        var price_top = document.querySelector("div.price-container>.price>.h2");
-        price_top.textContent = "starting from 1269,00 €";
+        var li_nav2 = document.createElement("li");
+        li_nav2.setAttribute("class","additional_information_tab active in");
+        li_nav2.setAttribute("id","tab-title-additional_information2");
+        li_nav2.setAttribute("role","tab");
+        li_nav2.setAttribute("aria-controls","tab-additional_information2");
+        li_nav2.innerHTML = '<a href="#description" data-toggle="tab"><span>Configuration Summary</span></a> ';
+        // navtabs.appendChild(li_nav2);
+
+        var reviews = document.querySelector(".reviews_tab");
+        var reviews_parent = reviews.parentNode;
+        reviews_parent.insertBefore(li_nav2,reviews);
+        reviews_parent.insertBefore(li_nav,reviews);
+        console.log(reviews);
+        document.querySelector("#tab-title-additional_information").remove();
+        document.querySelector("#tab-additional_information-73472").remove();
+
+        if(document.querySelector("#description") != null){
+            var description = document.querySelector("#description");
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(title));
+            description.appendChild(li);
+        }
     }
 })

@@ -28,6 +28,7 @@ Text Domain: uncode
     flex-wrap: wrap;
     justify-content: space-between;
     width: 61.2%;
+    align-items: center;
     margin: 0 auto;
 }
 
@@ -38,7 +39,7 @@ Text Domain: uncode
 
 #bar-fixed-bottom>.row>:last-child{
     text-align: right;
-    width: 13%;
+    width: 23%;
 }
 
 #bar-fixed-bottom>.row>.column-lg-4>h4{
@@ -186,4 +187,10 @@ li.gfield.gsection {
 
 li label {
     font-size: 1.1em !important;
+}
+
+#description{
+    max-width: 60%;
+    margin: auto;
+    padding: 2%;
 }
