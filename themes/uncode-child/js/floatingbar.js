@@ -48,6 +48,9 @@ jQuery(document).ready(function () {
                         label += ": ";
                         if(document.querySelector(".image-choices-choice-text")!=null){
                             label += document.querySelector(".image-choices-choice-text").innerHTML;
+                            label += self.parentElement.querySelector("label").textContent;
+                            console.log(self.parentElement.querySelector("label").textContent);
+                            console.log("hello");
                         }else{
                             let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
                             label += doc.body.firstChild.textContent;
