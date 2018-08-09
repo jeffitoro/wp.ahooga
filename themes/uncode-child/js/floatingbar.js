@@ -170,9 +170,9 @@ jQuery(document).ready(function () {
         //hide other form for produit	
         document.querySelectorAll("select[id^='pa_']").forEach(function (ele) {	
             console.log(ele.id);	
-            if(ele.id != "pa_color"){	
+            // if(ele.id != "pa_color"){	
                 ele.parentElement.parentElement.setAttribute("style","display:none");        	
-            }	
+            // }	
         })	
          function fireEvent(element,event){	
             if (document.createEventObject){	
@@ -250,7 +250,10 @@ jQuery(document).ready(function () {
                 default:
                     break;
             }
-            console.log(ele.innerHTML);
         })
+
+
+        var radio = document.querySelectorAll(".gfield_radio");
+        console.log(radio);
     }
 })
