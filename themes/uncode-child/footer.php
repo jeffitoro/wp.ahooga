@@ -176,7 +176,7 @@ wp_footer(); ?>
 	<div class="row">
 		<div class="column-lg-4">
 			<div class="footer img-help">
-				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-camion-50-ios.png" alt="">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-casque-à-écouteurs-50.png" alt="">
 				<div>
 					<h4>Get help</h4>
 					<h6>0032 2 223 66 78</h5>
@@ -185,7 +185,7 @@ wp_footer(); ?>
 		</div>
 		<div class="column-lg-4">
 			<div class="footer img-help">
-				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-casque-à-écouteurs-50.png" alt="">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-camion-50-ios.png" alt="">
 				<div>
 					<h4>Ship</h4>
 					<h6>1-3 weeks</h5>
