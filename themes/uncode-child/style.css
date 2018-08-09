@@ -42,8 +42,8 @@ Text Domain: uncode
     width: 23%;
 }
 
-#bar-fixed-bottom>.row>.column-lg-4>h4{
-    /* margin-top: 15px; */
+#bar-fixed-bottom>.row>.column-lg-4>h6{
+    margin-top: 6px !important;
 }
 
 .footer-scroll-top{
@@ -213,4 +213,23 @@ li label {
         min-height: 50px;
         min-width: 100px;
     }
+}
+.image-choices-field .image-choices-choice label {
+    padding: 5px !important;
+
+}
+
+.footer{
+    display: flex;
+    font-size: 14px;
+}
+
+.footer h4, .footer h6{
+    padding-top: 2px !important;
+    margin-top: 0 !important;
+}
+
+.footer img{
+    height: 29px;
+    margin-right: 6%;
 }

@@ -58,6 +58,7 @@ jQuery(document).ready(function () {
                 console.log(this);
                 var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;	
                 console.log(label);
+                
                 var selection = document.querySelector("select[id='pa_"+label.toLowerCase()+"']");
                 if(selection!=null){
                     if (this.parentElement.querySelector("label")==null) {	
@@ -236,24 +237,55 @@ jQuery(document).ready(function () {
         }
 
         var labels = document.querySelectorAll("li>label.gfield_label");
-        labels.forEach(function (ele) {
+        // labels.forEach(function (ele) {
+            // console.log(ele);
 
-            switch (ele.innerText) {
-                case "Engine":  ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
-                case "Model":   ele.innerHTML += "<br/><span class='title'>Quel Model vous voulez?</span>";break;
-                case "Color":   ele.innerHTML += "<br/><span class='title'>Quel Color preferez vous?</span>";break;
-                case "Brakes":  ele.innerHTML += "<br/><span class='title'>Quel Brakes utilisez vous?</span>";break;
-                case "Saddle":  ele.innerHTML += "<br/><span class='title'>Quel Saddle preferez vous?</span>";break;
-                case "Seatpost":ele.innerHTML += "<br/><span class='title'>Quel Seatpost preferez vous?</span>";break;
-                case "Battery": ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
-                case "Warranty": ele.innerHTML += "<br/><span class='title'>Quel Durée de Warranty preferez vous?</span>";break;
-                default:
-                    break;
-            }
-        })
+        //     switch (ele.innerText) {
+        //         case "Engine":  ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
+        //         case "Model":   ele.innerHTML += "<br/><span class='title'>Quel Model vous voulez?</span>";break;
+        //         case "Color":   ele.innerHTML += "<br/><span class='title'>Quel Color preferez vous?</span>";break;
+        //         case "Brakes":  ele.innerHTML += "<br/><span class='title'>Quel Brakes utilisez vous?</span>";break;
+        //         case "Saddle":  ele.innerHTML += "<br/><span class='title'>Quel Saddle preferez vous?</span>";break;
+        //         case "Seatpost":ele.innerHTML += "<br/><span class='title'>Quel Seatpost preferez vous?</span>";break;
+        //         case "Battery": ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
+        //         case "Warranty": ele.innerHTML += "<br/><span class='title'>Quel Durée de Warranty preferez vous?</span>";break;
+        //         default:
+        //             break;
+        //     }
+        // })
 
 
         var radio = document.querySelectorAll(".gfield_radio");
+        
         console.log(radio);
+
+        var models = document.querySelectorAll("#input_1_24>li>label");
+        var i = 0
+        models.forEach(function (ele) {
+            ele.setAttribute("style","font-weight:700")
+            ele.setAttribute("style","text-align:left");
+            
+        })
+        models.forEach(function (ele) {
+            switch (i) {
+                case 0:
+                console.log(ele.innerHTML);
+                ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>The original</div>";
+                break;
+                case 1:
+                ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>The most comfy, hassle-free</div>";
+                break;
+                case 2:
+                ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>When comfort meets style</div>";
+                break;
+                case 3:
+                ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>Closer to heaven, literally</div>";
+                break;
+            
+                default:
+                    break;
+            }
+            i++;
+        })
     }
 })
