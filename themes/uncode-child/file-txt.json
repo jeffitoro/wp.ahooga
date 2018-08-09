@@ -3,6 +3,15 @@
         "fr":{
             "options-configurateur":{
                 
+            },
+            "soustitre-configurateur":{
+                "Engine":"Quel Engine vous faut-il?",
+                "Model":"Quel Model vous voulez?",
+                "Color":"Quel Color preferez vous?",
+                "Brakes":"Quel Brakes utilisez vous?",
+                "Saddle":"Quel Saddle preferez vous?",
+                "Seatpost":"Quel Seatpost preferez vous?",
+                "Battery":"Quel Engine vous faut-il?"
             }
         }
     }

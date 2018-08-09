@@ -175,12 +175,12 @@ wp_footer(); ?>
 <div id="bar-fixed-bottom" style="display:none">
 	<div class="row">
 		<div class="column-lg-4">
-			<h4>Call Support</h4>
-			<h6>0412356498</h5>
+			<h4>Get help</h4>
+			<h6>0032 2 223 66 78</h5>
 		</div>
 		<div class="column-lg-4">
-			<h4>Shipping</h4>
-			<h6>2-3 days</h5>
+			<h4>Ship</h4>
+			<h6>1-3 weeks</h5>
 		</div>
 		<div class="column-lg-4">
 			<p id="total" style="font-size:2.5em;text-align:right"></p>

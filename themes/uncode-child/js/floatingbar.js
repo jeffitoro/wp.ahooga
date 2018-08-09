@@ -1,3 +1,4 @@
+
 (function ($) {
         this.randomtip = function () {
             var length = $("#bar-fixed-bottom").length;
@@ -16,7 +17,8 @@ jQuery(document).ready(function () {
     // if i'm not in page shop woocommerce then action
     if (pageShop == null) {
         var price_top = document.querySelector("div.price-container>.price>.h2");
-        price_top.textContent = "starting from 1269,00 €";
+        price_top.setAttribute("style","font-weight:700;font-size:16px");
+        price_top.textContent = "Starting From 1269,00 €";
 
         // show bar bottom
         $("#bar-fixed-bottom").show();
@@ -232,5 +234,23 @@ jQuery(document).ready(function () {
             li.appendChild(document.createTextNode(title));
             description.appendChild(li);
         }
+
+        var labels = document.querySelectorAll("li>label.gfield_label");
+        labels.forEach(function (ele) {
+
+            switch (ele.innerText) {
+                case "Engine":  ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
+                case "Model":   ele.innerHTML += "<br/><span class='title'>Quel Model vous voulez?</span>";break;
+                case "Color":   ele.innerHTML += "<br/><span class='title'>Quel Color preferez vous?</span>";break;
+                case "Brakes":  ele.innerHTML += "<br/><span class='title'>Quel Brakes utilisez vous?</span>";break;
+                case "Saddle":  ele.innerHTML += "<br/><span class='title'>Quel Saddle preferez vous?</span>";break;
+                case "Seatpost":ele.innerHTML += "<br/><span class='title'>Quel Seatpost preferez vous?</span>";break;
+                case "Battery": ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
+                case "Warranty": ele.innerHTML += "<br/><span class='title'>Quel Durée de Warranty preferez vous?</span>";break;
+                default:
+                    break;
+            }
+            console.log(ele.innerHTML);
+        })
     }
 })
