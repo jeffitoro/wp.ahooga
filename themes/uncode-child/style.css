@@ -233,18 +233,7 @@ li label {
     height: 29px;
     margin-right: 6%;
 }
-
+ 
 .style-light .footer-links a{
     color: white !important;
-}
-
-@media only screen and  (max-width:800px){
-    .gform_wrapper .gfield_radio li label *{
-        /* width: 20%; */
-        /* background-color: red; */
-    }
-}
-
-.row-navigation.row-navigation-light {
-    display: none;
 }
