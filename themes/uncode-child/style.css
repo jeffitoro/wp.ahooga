@@ -295,9 +295,9 @@ span.image-choices-choice-image-wrap{
 .image-choices-choice.image-choices-choice-hover.image-choices-choice-selected{
     border-color: blue;
 }
+
 .image-choices-field.image-choices-choice label{
     padding: inherit !important;
-}
 
 .row-navigation.row-navigation-light {
     display: none;
