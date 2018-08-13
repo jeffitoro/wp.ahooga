@@ -8,6 +8,55 @@ Version: 1.0.0
 Text Domain: uncode
 */
 
+@media only screen and (min-width:800px) and (max-width:1200px){
+    #bar-fixed-bottom>.row{
+        width: 90% !important;
+    }
+}
+@media only screen and (min-width:800px) and (max-width:970px){
+    .footer-links{
+    	text-align: center !important;
+    }
+}
+@media only screen and (max-width:800px){
+    #bar-fixed-bottom{
+	top: 0 !important;
+	bottom: inherit !important;
+	font-size: 5px !important;
+	padding: 0 5px;
+    }
+    .footer div>h4{
+        font-size: 10px;
+    }
+    #bar-fixed-bottom>.row{
+        width: 100% !important;
+	align-items: center;
+    }
+    #bar-fixed-bottom>.row>.column-lg-4>h6{
+    	font-size: 5px !important;
+    }
+    .button{
+        padding: 10px !important;
+        border-radius: 2px !important;
+    	font-size: 10px !important;
+    }
+    .footer div>h6{
+   	font-size: 7px; 
+    }
+    .row-navigation.row-navigation-light {
+    	display: none;
+    }
+    .footer-links{
+    	text-align: center !important;
+    }
+    .menu-wrapper{
+    	display: none;
+    }
+    p#total{
+        margin: inherit;
+    }
+}
+
 #bar-fixed-bottom{
     max-height: 13%;
     position: fixed;
@@ -80,7 +129,7 @@ footer .footer-last .add-class-footer{
     margin: 9% 2px;
     cursor: pointer;
     border:2px solid black;
-    border-radius: 8px;
+    border-radius: 2px;
 }
 
 .button-btn {
@@ -94,7 +143,7 @@ footer .footer-last .add-class-footer{
     font-size: 16px;
     margin: 12% 2px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 2px;
     width: 100%;
 }
 
@@ -116,7 +165,7 @@ input[type=radio]+label{
     font-size: 16px;
     margin: 12% 2px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 2px;
     width: 98% !important;
 }
 
@@ -124,10 +173,6 @@ input[type=radio]+label{
     max-width: inherit !important;
     display: flex !important;
     justify-content: space-between;
-}
-
-.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {  
-    border-color: blue;
 }
 
 .gfield_radio{
@@ -204,6 +249,10 @@ li label {
     flex-direction: row;
 }
 
+.images{
+    background-color= red;
+}
+
 .image-choices-field .image-choices-choice-image-wrap {
     height: 50px !important;
 }
@@ -236,4 +285,20 @@ li label {
 
 .style-light .footer-links a{
     color: white !important;
+}
+
+span.image-choices-choice-image-wrap{
+    padding: 25px;
+    display: inline-block;
+}
+
+.image-choices-choice.image-choices-choice-hover.image-choices-choice-selected{
+    border-color: blue;
+}
+.image-choices-field.image-choices-choice label{
+    padding: inherit !important;
+}
+
+.row-navigation.row-navigation-light {
+    display: none;
 }

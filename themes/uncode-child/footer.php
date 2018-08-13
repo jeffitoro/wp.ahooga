@@ -179,7 +179,7 @@ wp_footer(); ?>
 				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-casque-à-écouteurs-50.png" alt="">
 				<div>
 					<h4>Get help</h4>
-					<h6>0032 2 223 66 78</h5>
+					<h6>+3222236678</h5>
 				</div>
 			</div>
 		</div>
