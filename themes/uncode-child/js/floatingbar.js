@@ -17,17 +17,20 @@ jQuery(document).ready(function () {
     // if i'm not in page shop woocommerce then action
     if (pageShop == null) {
 	
-	window.onscroll = function(){
-            console.dir(window.pageYOffset);
+	    window.onscroll = function(){
             var sizescroll = window.pageYOffset;
-            if(sizescroll<100){
-	        $("#bar-fixed-bottom").fadeOut();
-                $(".menu-wrapper").fadeIn();
-            }else{
-	        $("#bar-fixed-bottom").fadeIn();
-                $(".menu-wrapper").fadeOut();
+            var sizewidth = window.innerWidth;
+            console.log(sizewidth);
+            if (sizewidth<960){
+                if(sizescroll<100){
+                $("#bar-fixed-bottom").fadeOut();
+                    $(".menu-wrapper").fadeIn();
+                }else{
+                $("#bar-fixed-bottom").fadeIn();
+                    $(".menu-wrapper").fadeOut();
+                }
             }
-	}
+	    }
 
         var price_top = document.querySelector("div.price-container>.price>.h2");
         price_top.setAttribute("style","font-weight:700;font-size:16px");
