@@ -175,16 +175,25 @@ wp_footer(); ?>
 <div id="bar-fixed-bottom" style="display:none">
 	<div class="row">
 		<div class="column-lg-4">
-			<h4>Call Support</h4>
-			<h6>0412356498</h5>
+			<div class="footer img-help">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-casque-à-écouteurs-50.png" alt="">
+				<div>
+					<h4>Get help</h4>
+					<h6>+3222236678</h5>
+				</div>
+			</div>
 		</div>
 		<div class="column-lg-4">
-			<h4>Shipping</h4>
-			<h6>2-3 days</h5>
+			<div class="footer img-help">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-camion-50-ios.png" alt="">
+				<div>
+					<h4>Ship</h4>
+					<h6>1-3 weeks</h5>
+				</div>
+			</div>
 		</div>
 		<div class="column-lg-4">
-			<h4>Price Total</h4>
-			<p id="total" style=""></p>
+			<p id="total" style="font-size:2.5em;text-align:right"></p>
 		</div>
 		<div class="column-lg-4">
 			<button class="button" id="btn-add">Add to cart</button>
