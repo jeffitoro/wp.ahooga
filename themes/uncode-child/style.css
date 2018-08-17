@@ -30,7 +30,7 @@ Text Domain: uncode
     }
     #bar-fixed-bottom>.row{
         width: 100% !important;
-	    align-items: center;
+	align-items: center;
     }
     #bar-fixed-bottom>.row>.column-lg-4>h6{
     	font-size: 5px !important;
@@ -41,7 +41,7 @@ Text Domain: uncode
     	font-size: 10px !important;
     }
     .footer div>h6{
-   	    font-size: 7px; 
+   	font-size: 7px; 
     }
     .row-navigation.row-navigation-light {
     	display: none;
@@ -50,7 +50,7 @@ Text Domain: uncode
     	text-align: center !important;
     }
     .menu-wrapper{
-    	display: none;
+    	/*display: none;*/
     }
     p#total{
         margin: inherit;
@@ -75,10 +75,10 @@ Text Domain: uncode
 #bar-fixed-bottom>.row{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 61.2%;
-    align-items: center;
     margin: 0 auto;
+    align-items: center;
 }
 
 #bar-fixed-bottom>.row>:not(:last-child){
@@ -254,7 +254,7 @@ li label {
 }
 
 .image-choices-field .image-choices-choice-image-wrap {
-    height: 50px !important;
+    /*height: 50px !important;*/
 }
 
 @media only screen and (min-width:800px) and (max-width:1600px){
@@ -301,4 +301,154 @@ span.image-choices-choice-image-wrap{
 }
 .row-navigation.row-navigation-light {
     display: none;
+}
+
+@media (min-width: 960px){
+
+body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last-child > a{
+    padding-right: 14px !important;
+}
+
+}
+
+
+.icon img{
+    max-width: 35px;
+}
+
+.icon-marge .double-block-padding{
+    padding: 0.5%;
+}
+.icon-marge h3{
+    padding: 3px;
+    margin: 0px;
+}
+
+.icon-space .row-inner{
+    /*display: flex;*/
+}
+
+.center-icons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    z-index: 2010;
+}
+
+.animation-icons{
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sous-title{
+    color: white;
+}
+.sous-title h1{
+    color: white;
+}
+
+.title h3{
+    padding: 4px;
+    margin: 0px;
+}
+.title h1{
+    font-size: 72px;
+}
+.title-link i{
+    vertical-align: text-bottom;
+    color: #e5424f;
+}
+
+.one-dot-link.is-selected{
+}
+
+.no-touch .onepage-pagination .cd-label {
+    color: black;
+}
+
+#amelia-app-booking #am-step-booking{
+    /*max-width: inherit !important;*/
+    /*background: -webkit-radial-gradient(left top , circle cover , rgb(123, 67, 244) , rgb(242, 62, 137) 48% , rgb(244, 103, 80) 100%) !important;*/
+    /*margin: 0 !important;*/
+    border-radius: 0 !important;
+    border: 0 !important;
+    background: url(https://devahooga.molengeek.com/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0092.jpg) no-repeat center left, url(https://devahooga.molengeek.com/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0142.jpg) !important;
+    background-position: 30% 30% !important;
+}
+
+
+#nav-icons{
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f3f3f3;
+}
+
+#nav-icons *{
+}
+
+.txt_paragraphe p span{
+    font-size: 20px !important;
+}
+
+#bar-fixed-top>.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#bar-fixed-top h3 a{
+    color: black
+}
+
+#bar-fixed-top span{
+    color: #ef5602;
+    font-size: 9px;
+}
+
+li label#label_1_32_0{
+    display: inherit !important;
+}
+#input_1_32 li label span{
+    background-size: contain;
 }
