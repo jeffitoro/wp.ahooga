@@ -200,4 +200,57 @@ wp_footer(); ?>
 		</div>
 	</div>
 </div>
+<div id="bar-fixed-top" style="display:none">
+    <div id="nav-icons" class="row">
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png" width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="https://devahooga.molengeek.com/product/folding-bike">Folding Bike</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/heightwitdhBBBBicycle_Icon-08-512-copie.png"
+                        width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="#">Modular Bike</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="icon-new">
+                <span>NEW!</span>
+            </div>
+        </div>
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png" width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="#">Modular Bike 36v</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="icon-new">
+                <span>NEW!</span>
+            </div>
+        </div>
+    </div>
+</div>
 </html>
