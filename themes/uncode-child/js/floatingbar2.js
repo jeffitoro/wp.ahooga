@@ -17,16 +17,12 @@ jQuery(document).ready(function () {
     // if i'm not in page shop woocommerce then action
     if (isFolding != null) {
         var sizenav = $(".menu-wrapper").css("height");
-        console.log("sizenav: "+sizenav);
         $("#nav-icons").css({"top":sizenav});
-        console.log("jeff");
 	
         window.onscroll = function(){
             var sizescroll = window.pageYOffset;
             var sizewidth = window.innerWidth;
-            console.log(sizescroll);
 	    var sizenav = $(".menu-wrapper").css("height");
-            console.log("sizenav: "+sizenav);
             if(sizescroll<10){
                 $("#nav-icons").css({"top":sizenav});
                 $(".menu-wrapper").fadeIn();

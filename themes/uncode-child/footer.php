@@ -243,7 +243,7 @@ wp_footer(); ?>
             <div class="icon-box-content icon-marge">
                 <div class="icon-box-heading icon-box-fa-3x">
                     <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
-                        <a href="#">Modular Bike 36v</a>
+                        <a href="#">Folding Bike 36v</a>
                     </h3>
                 </div>
             </div>

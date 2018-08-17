@@ -23,10 +23,10 @@ jQuery(document).ready(function () {
             console.log(sizewidth);
             if (sizewidth<960){
                 if(sizescroll<100){
-                $("#bar-fixed-bottom").fadeOut();
+                    $("#bar-fixed-bottom").fadeOut();
                     $(".menu-wrapper").fadeIn();
                 }else{
-                $("#bar-fixed-bottom").fadeIn();
+                    $("#bar-fixed-bottom").fadeIn();
                     $(".menu-wrapper").fadeOut();
                 }
             }
@@ -37,7 +37,7 @@ jQuery(document).ready(function () {
         price_top.textContent = "Starting From 1269,00 €";
 
         // show bar bottom
-        $("#bar-fixed-bottom").show();
+        //$("#bar-fixed-bottom").show();
 
         // table with elements of product
 
