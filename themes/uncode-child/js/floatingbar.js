@@ -16,6 +16,11 @@ var pageShop = $("article").html();
 
 // if i'm not in page shop woocommerce then action
 if (pageShop == null) {
+    var width = window.innerWidth;
+    if (width>=960) {
+        //show bar bottom
+        $("#bar-fixed-bottom").show();
+    }
 
     window.onscroll = function(){
         var sizescroll = window.pageYOffset;
