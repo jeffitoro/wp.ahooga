@@ -154,6 +154,10 @@ footer .footer-last .add-class-footer{
     border: 1px solid blue;
 }
 
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
+    border: 1px solid blue;
+}
+
 input[type=radio]{
     display: none !important;
 }
