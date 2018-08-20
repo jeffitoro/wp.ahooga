@@ -16,26 +16,20 @@ function theme_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
+/*footer bar*/
 function wpb_floating_bar() {
     wp_enqueue_script( 'wpb-footerbar', get_stylesheet_directory_uri() . '/js/floatingbar.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_floating_bar' );
+/*end footer bar*/
+
+/*top bar*/
+function wpt_floating_bar() {
+    wp_enqueue_script( 'wpb-topbar', get_stylesheet_directory_uri() . '/js/floatingbar2.js', array( 'jquery' ) );
+}
+add_action( 'wp_enqueue_scripts', 'wpt_floating_bar' );
+/*end top bar*/
 
 /* Remove product meta */
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
-// add_action( 'woocommerce_before_variations_form', 'bbloomer_custom_action', 5 );
- 
-// function r_custom_action() {
-// 	echo 'TEST';
-// }bbloome
-
-// add_action( 'woocommerce_single_variation', 'bbloomer_custom_action', 5 );
-
-// add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'override_color_variation_display');
-
-// function override_color_variation_display( $html,$args ) {
-//     $html = 'Some override';
-
-//     return $html;
-// }
