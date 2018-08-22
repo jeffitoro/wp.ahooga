@@ -250,8 +250,11 @@ if (pageShop == null) {
     reviews_parent.insertBefore(li_nav2,reviews);
     reviews_parent.insertBefore(li_nav,reviews);
     console.log(reviews);
-    document.querySelector("#tab-title-additional_information").remove();
-    document.querySelector("#tab-additional_information-73472").remove();
+    //document.querySelector("#tab-title-additional_information").remove();
+    //document.querySelector("#tab-additional_information-73472").remove();
+    if(document.querySelector("#tab-additional_information-74074") != null) {
+        document.querySelector("#tab-additional_information-74074").remove();
+    }
 
     if(document.querySelector("#description") != null){
         var description = document.querySelector("#description");
