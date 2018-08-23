@@ -36,7 +36,7 @@ Text Domain: uncode
     	font-size: 5px !important;
     }
     .button{
-        padding: 10px !important;
+        padding: 7px !important;
         border-radius: 2px !important;
     	font-size: 10px !important;
     }
@@ -54,6 +54,9 @@ Text Domain: uncode
     }
     p#total{
         margin: inherit;
+    }
+    .title h1{
+        font-size: 46px;
     }
 }
 
@@ -148,6 +151,10 @@ footer .footer-last .add-class-footer{
 }
 
 .button-btn:checked{
+    border: 1px solid blue;
+}
+
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
     border: 1px solid blue;
 }
 
@@ -254,13 +261,17 @@ li label {
 }
 
 .image-choices-field .image-choices-choice-image-wrap {
-    /*height: 50px !important;*/
+    height: 50px !important;
+    width: inherit !important;
+}
+
+span.image-choices-choice-image-wrap{
 }
 
 @media only screen and (min-width:800px) and (max-width:1600px){
     .image-choices-field .image-choices-choice-image-wrap {
         min-height: 50px;
-        min-width: 100px;
+        /*min-width: 100px;*/
     }
 }
 .image-choices-field .image-choices-choice label {
@@ -279,7 +290,7 @@ li label {
 }
 
 .footer img{
-    height: 29px;
+    height: 20px;
     margin-right: 6%;
 }
  
@@ -320,7 +331,7 @@ body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last
     padding: 0.5%;
 }
 .icon-marge h3{
-    padding: 3px;
+    padding: 3px 3px 0px 3px;
     margin: 0px;
 }
 
@@ -450,5 +461,5 @@ li label#label_1_32_0{
     display: inherit !important;
 }
 #input_1_32 li label span{
-    background-size: contain;
+    /*background-size: contain;*/
 }
