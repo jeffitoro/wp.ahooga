@@ -33,3 +33,23 @@ add_action( 'wp_enqueue_scripts', 'wpt_floating_bar' );
 /* Remove product meta */
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 
+
+// add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+// function wpdocs_theme_setup() {
+//     add_image_size( 'woocommerce_get_image_size_gallery_thumbnail', 200,200,false ); // 300 pixels wide (and unlimited height)
+// }
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+    return array(
+        'width'  => 600,
+        'height' => 400,
+        'crop'   => 0,
+    );
+} );
+
+add_action( 'after_setup_theme', 'yourtheme_setup' );
+
+function yourtheme_setup() {
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
