@@ -205,7 +205,7 @@ wp_footer(); ?>
         <div class="col-2" style="padding:5px">
             <div class="icon-box-icon fa-container  icon">
                 <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png" width="869" height="757" alt="">
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto1.png" width="869" height="757" alt="">
                 </a>
             </div>
             <div class="icon-box-content icon-marge">
@@ -219,7 +219,7 @@ wp_footer(); ?>
         <div class="col-2" style="padding:5px">
             <div class="icon-box-icon fa-container  icon">
                 <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/heightwitdhBBBBicycle_Icon-08-512-copie.png"
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto2.png"
                         width="869" height="757" alt="">
                 </a>
             </div>
@@ -237,7 +237,7 @@ wp_footer(); ?>
         <div class="col-2" style="padding:5px">
             <div class="icon-box-icon fa-container  icon">
                 <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png" width="869" height="757" alt="">
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto1.png" width="869" height="757" alt="">
                 </a>
             </div>
             <div class="icon-box-content icon-marge">
