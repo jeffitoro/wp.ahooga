@@ -367,22 +367,6 @@ jQuery(document).ready(function () {
         }
 
         var labels = document.querySelectorAll("li>label.gfield_label");
-        // labels.forEach(function (ele) {
-        // console.log(ele);
-
-        //     switch (ele.innerText) {
-        //         case "Engine":  ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
-        //         case "Model":   ele.innerHTML += "<br/><span class='title'>Quel Model vous voulez?</span>";break;
-        //         case "Color":   ele.innerHTML += "<br/><span class='title'>Quel Color preferez vous?</span>";break;
-        //         case "Brakes":  ele.innerHTML += "<br/><span class='title'>Quel Brakes utilisez vous?</span>";break;
-        //         case "Saddle":  ele.innerHTML += "<br/><span class='title'>Quel Saddle preferez vous?</span>";break;
-        //         case "Seatpost":ele.innerHTML += "<br/><span class='title'>Quel Seatpost preferez vous?</span>";break;
-        //         case "Battery": ele.innerHTML += "<br/><span class='title'>Quel Engine vous faut-il?</span>";break;
-        //         case "Warranty": ele.innerHTML += "<br/><span class='title'>Quel Durée de Warranty preferez vous?</span>";break;
-        //         default:
-        //             break;
-        //     }
-        // })
 
 
         var radio = document.querySelectorAll(".gfield_radio");
@@ -426,15 +410,57 @@ jQuery(document).ready(function () {
         warranty.forEach(function (ele) {
             switch (other_i) {
                 case 0:
-                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>5 Years On Frame And Fork</div>";
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>5 years On Frame And Fork.</br>2 years on all other components.</div>";
                     break;
                 case 1:
-                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>2 Years On All Other Components</div>";
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>On all other components</div>";
                     break;
                 default:
                     break;
             }
             other_i++;
+        })
+        
+        warranty = document.querySelectorAll("#input_1_45>li>label");
+        var other_i3 = 0;
+        warranty.forEach(function (ele) {
+            ele.setAttribute("style", "font-weight:700");
+            ele.setAttribute("style", "text-align:left");
+
+        })
+        warranty.forEach(function (ele) {
+            switch (other_i3) {
+                case 0:
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>5 years On Frame And Fork.</br>2 years on all other components.</div>";
+                    break;
+                case 1:
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>On all other components</div>";
+                    break;
+                default:
+                    break;
+            }
+            other_i3++;
+        })
+
+        var seatpost = document.querySelectorAll("#input_1_17>li>label");
+        var other_i2 = 0;
+        seatpost.forEach(function (ele) {
+            ele.setAttribute("style", "font-weight:700");
+            ele.setAttribute("style", "text-align:left");
+
+        })
+        seatpost.forEach(function (ele) {
+            switch (other_i2) {
+                case 0:
+                    // ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>5 years On Frame And Fork.</br>2 years on all other components.</div>";
+                    break;
+                case 1:
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>For riders above 1m85 tall</div>";
+                    break;
+                default:
+                    break;
+            }
+            other_i2++;
         })
     }
 

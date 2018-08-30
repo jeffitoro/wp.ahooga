@@ -117,13 +117,13 @@ footer .footer-last .add-class-footer{
 
 
 .button:hover{
-    background-color: #4ca9df;
-    color: #e5424f;
-    border-color: #4ca9df;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    border-color: rgb(38, 38, 38);
 }
 .button {
     background-color: #ffffff00;
-    color: black;
+    color: rgb(38, 38, 38);
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -131,7 +131,7 @@ footer .footer-last .add-class-footer{
     font-size: 18px;
     margin: 9% 2px;
     cursor: pointer;
-    border:2px solid black;
+    border:1px solid rgb(38, 38, 38);
     border-radius: 2px;
 }
 
@@ -155,9 +155,10 @@ footer .footer-last .add-class-footer{
 }
 
 /* modification avec du javascript border color blue */
-.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
-    /* border: 1px solid blue; */
-}
+/* color selected */
+/* .gform_wrapper ul.gfield:not([class^="image-choices-field"])_radio li input[type=radio]:checked+label {
+    border: 1px solid blue;
+} */
 
 /* cercle selected hide */
 input[type=radio]{
@@ -190,10 +191,15 @@ input[type=radio]+label{
 }
 
 /* modification avec du javascript placement des elements */
+/* input[type=radio]:checked+label */
 .gform_wrapper .gfield_radio li label:not([id^="label_1_32_"]){
     max-width: inherit !important;
     display: flex !important;
     justify-content: space-between;
+}
+
+.gform_wrapper .gfield_radio li input[type=radio]:checked+label:not([id^="label_1_32_"]){
+    border: 1px solid blue;
 }
 
 
@@ -323,12 +329,11 @@ span.image-choices-choice-image-wrap{
     font-size: 11px !important;
 }
 
-.image-choices-choice.image-choices-choice-hover.image-choices-choice-selected{
-    /* border-color: blue; */
-}
 
+/* color selected border-color */
 .image-choices-field .image-choices-choice-selected{
     border-color: blue !important;
+    border-radius: 2px;
 }
 
 .image-choices-field.image-choices-choice label{
@@ -340,9 +345,9 @@ span.image-choices-choice-image-wrap{
 
 @media (min-width: 960px){
 
-body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last-child > a{
-    padding-right: 14px !important;
-}
+    body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last-child > a{
+        padding-right: 14px !important;
+    }
 
 }
 
@@ -357,10 +362,6 @@ body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last
 .icon-marge h3{
     padding: 3px 3px 0px 3px;
     margin: 0px;
-}
-
-.icon-space .row-inner{
-    /*display: flex;*/
 }
 
 .center-icons{
@@ -460,9 +461,6 @@ body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last
     z-index: 2999;
 }
 
-#nav-icons *{
-}
-
 .txt_paragraphe p span{
     font-size: 20px !important;
 }
@@ -482,13 +480,10 @@ body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last
     font-size: 9px;
 }
 
-li label#label_1_32_0{
-    /* display: inherit !important; */
-}
-
 .tech{
     display: flex;
     flex-direction: column;
+    padding: 3em 0;
 }
 .tech strong{
     padding-right: 10px;
@@ -562,7 +557,7 @@ li label#label_1_32_0{
     border-radius: 2px;
 }
 .color_picker_buttons button:hover{
-    background-color: #4ca9df;
-    color: #e5424f;
-    border-color: #4ca9df;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    border-color: rgb(38, 38, 38);
 }
