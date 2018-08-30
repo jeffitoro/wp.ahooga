@@ -175,20 +175,82 @@ wp_footer(); ?>
 <div id="bar-fixed-bottom" style="display:none">
 	<div class="row">
 		<div class="column-lg-4">
-			<h4>Call Support</h4>
-			<h6>0412356498</h5>
+			<div class="footer img-help">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-casque-à-écouteurs-50.png" alt="">
+				<div>
+					<h4>Get help</h4>
+					<h6>+3222236678</h5>
+				</div>
+			</div>
 		</div>
 		<div class="column-lg-4">
-			<h4>Shipping</h4>
-			<h6>2-3 days</h5>
+			<div class="footer img-help">
+				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-camion-50-ios.png" alt="">
+				<div>
+					<h4>Ship</h4>
+					<h6>1-3 weeks</h5>
+				</div>
+			</div>
 		</div>
 		<div class="column-lg-4">
-			<h4>Price Total</h4>
-			<p id="total" style=""></p>
+			<p id="total" style="font-size:2.5em;text-align:right"></p>
 		</div>
 		<div class="column-lg-4">
 			<button class="button" id="btn-add">Add to cart</button>
 		</div>
 	</div>
+</div>
+<div id="bar-fixed-top" style="display:none">
+    <div id="nav-icons" class="row">
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto1.png" width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="https://devahooga.molengeek.com/product/folding-bike">Folding Bike</a>
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto2.png"
+                        width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="#">Modular Bike</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="icon-new">
+                <span>NEW!</span>
+            </div>
+        </div>
+        <div class="col-2" style="padding:5px">
+            <div class="icon-box-icon fa-container  icon">
+                <a href="#" class="text-default-color custom-link">
+                    <img src="http://ahooga.test/wp-content/uploads/2018/07/ahooga-picto1.png" width="869" height="757" alt="">
+                </a>
+            </div>
+            <div class="icon-box-content icon-marge">
+                <div class="icon-box-heading icon-box-fa-3x">
+                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
+                        <a href="#">Folding Bike 36v</a>
+                    </h3>
+                </div>
+            </div>
+            <div class="icon-new">
+                <span>NEW!</span>
+            </div>
+        </div>
+    </div>
 </div>
 </html>

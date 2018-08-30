@@ -8,33 +8,94 @@ Version: 1.0.0
 Text Domain: uncode
 */
 
+@media only screen and (min-width:800px) and (max-width:1200px){
+    #bar-fixed-bottom>.row{
+        width: 90% !important;
+    }
+}
+@media only screen and (min-width:800px) and (max-width:970px){
+    .footer-links{
+    	text-align: center !important;
+    }
+}
+@media only screen and (max-width:800px){
+    #bar-fixed-bottom{
+	    top: 0 !important;
+	    bottom: inherit !important;
+	    font-size: 5px !important;
+	    padding: 0 5px;
+    }
+    .footer div>h4{
+        font-size: 10px;
+    }
+    #bar-fixed-bottom>.row{
+        width: 100% !important;
+	align-items: center;
+    }
+    #bar-fixed-bottom>.row>.column-lg-4>h6{
+    	font-size: 5px !important;
+    }
+    .button{
+        padding: 7px !important;
+        border-radius: 2px !important;
+    	font-size: 10px !important;
+    }
+    .footer div>h6{
+   	font-size: 7px; 
+    }
+    .row-navigation.row-navigation-light {
+    	display: none;
+    }
+    .footer-links{
+    	text-align: center !important;
+    }
+    .menu-wrapper{
+    	/*display: none;*/
+    }
+    p#total{
+        margin: inherit;
+    }
+    .title h1{
+        font-size: 46px;
+    }
+}
+
 #bar-fixed-bottom{
+    max-height: 13%;
     position: fixed;
-    outline-color: #eaeaea;
-    background-color: #DFDCE3; 
+    outline-color: #ececec;
+    background-color: #f7f7f7; 
     bottom: 0px; 
     color:black; 
     font-family: Arial, Helvetica, sans-serif; 
     width:100%; 
     z-index:99999;
-    opacity: 0.95; 
+    opacity: 0.99; 
     font-weight: bold;
-    padding: 10px;
+    border-top: 1px solid #cecece;
 }
 
 #bar-fixed-bottom>.row{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 64%;
+    margin: 0 auto;
+    align-items: center;
 }
 
-#bar-fixed-bottom>.row>.column-lg-4{
-    width: 13.25%;
-    text-align: center;
+#bar-fixed-bottom>.row>:not(:last-child){
+    width: 23%;
+    text-align: left;
 }
 
-#bar-fixed-bottom>.row>.column-lg-4>h4{
-    margin-top: 15px;
+#bar-fixed-bottom>.row>:last-child{
+    text-align: right;
+    width: 23%;
+}
+
+#bar-fixed-bottom>.row>.column-lg-4>h6{
+    margin-top: 6px !important;
 }
 
 .footer-scroll-top{
@@ -54,18 +115,24 @@ footer .footer-last .add-class-footer{
     background-color: red;
 }
 
+
+.button:hover{
+    background-color: #4ca9df;
+    color: #e5424f;
+    border-color: #4ca9df;
+}
 .button {
-    background-color:black; /* Green */
-    border: none;
-    color: white;
+    background-color: #ffffff00;
+    color: black;
     padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 12% 2px;
+    font-size: 18px;
+    margin: 9% 2px;
     cursor: pointer;
-    border-radius: 8px;
+    border:2px solid black;
+    border-radius: 2px;
 }
 
 .button-btn {
@@ -79,7 +146,7 @@ footer .footer-last .add-class-footer{
     font-size: 16px;
     margin: 12% 2px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 2px;
     width: 100%;
 }
 
@@ -87,9 +154,17 @@ footer .footer-last .add-class-footer{
     border: 1px solid blue;
 }
 
+/* modification avec du javascript border color blue */
+.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {
+    /* border: 1px solid blue; */
+}
+
+/* cercle selected hide */
 input[type=radio]{
     display: none !important;
 }
+
+/* forme boutons selecteds */
 input[type=radio]+label{
     background-color: white; /* Green */
     border: 1px solid #80808052;
@@ -101,25 +176,26 @@ input[type=radio]+label{
     font-size: 16px;
     margin: 12% 2px;
     cursor: pointer;
-    border-radius: 4px;
-    width: 98% !important;
+    border-radius: 2px;
+    width: 99% !important;
 }
 
-.gform_wrapper .gfield_radio li label {
+@media only screen and (max-width:800px){
+    input[type=radio]+label{
+        width: 98% !important;
+    }
+    .gform_body .image-choices-field .image-choices-choice label{
+        padding: 0 !important;
+    }
+}
+
+/* modification avec du javascript placement des elements */
+.gform_wrapper .gfield_radio li label:not([id^="label_1_32_"]){
     max-width: inherit !important;
     display: flex !important;
     justify-content: space-between;
 }
 
-.gform_wrapper ul.gfield_radio li input[type=radio]:checked+label {  
-    border-color: blue;
-}
-
-.gfield_radio{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
 
 div.quantity{
     display: flex;
@@ -171,5 +247,322 @@ li.gfield.gsection {
 }
 
 li label {
-    font-size: 1.1em !important;
+    font-size: 14px !important;
+}
+
+#description{
+    max-width: 60%;
+    margin: auto;
+    padding: 2%;
+}
+.title{
+    font-size: 12px;
+    color: #0070c9;
+    padding-bottom: 5px;
+}
+
+.images .ginput_container .gfield_radio{
+    text-align: center;
+}
+
+.images .ginput_container .gfield_radio li{
+    width: 22%;
+}
+@media only screen and (min-width:900px) and (max-width:1100px){
+    .images .ginput_container .gfield_radio li{
+        width: 18% !important;
+    }
+}
+
+@media only screen and (min-width:1100px){
+    .images .ginput_container .gfield_radio li{
+        width: 14% !important;
+    }
+}
+
+
+/* label color */
+.image-choices-field .image-choices-choice-image-wrap {
+    height: 50px !important;
+    width: fit-content !important;
+}
+
+@media only screen and (min-width:800px) and (max-width:1600px){
+    .image-choices-field .image-choices-choice-image-wrap {
+        min-height: 50px;
+        /*min-width: 100px;*/
+    }
+}
+
+.footer{
+    display: flex;
+    font-size: 14px;
+}
+
+.footer h4, .footer h6{
+    padding-top: 2px !important;
+    margin-top: 0 !important;
+}
+
+.footer img{
+    height: 20px;
+    margin-right: 6%;
+}
+ 
+.style-light .footer-links a{
+    color: white !important;
+}
+
+span.image-choices-choice-image-wrap{
+    padding: 25px;
+    display: inline-block;
+}
+
+.image-choices-field .image-choices-choice-price{
+    padding-top: 0px !important;
+    font-size: 11px !important;
+}
+
+.image-choices-choice.image-choices-choice-hover.image-choices-choice-selected{
+    /* border-color: blue; */
+}
+
+.image-choices-field .image-choices-choice-selected{
+    border-color: blue !important;
+}
+
+.image-choices-field.image-choices-choice label{
+    padding: inherit !important;
+}
+.row-navigation.row-navigation-light {
+    display: none;
+}
+
+@media (min-width: 960px){
+
+body[class*=hmenu-]:not(.hormenu-position-right) .navbar-nav-last > ul > li:last-child > a{
+    padding-right: 14px !important;
+}
+
+}
+
+
+.icon img{
+    max-width: 35px;
+}
+
+.icon-marge .double-block-padding{
+    padding: 0.5%;
+}
+.icon-marge h3{
+    padding: 3px 3px 0px 3px;
+    margin: 0px;
+}
+
+.icon-space .row-inner{
+    /*display: flex;*/
+}
+
+.center-icons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    z-index: 2010;
+}
+
+.animation-icons{
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sous-title{
+    color: white;
+}
+.sous-title h1{
+    color: white;
+}
+
+.title h3{
+    padding: 4px;
+    margin: 0px;
+}
+.title h1{
+    font-size: 72px;
+}
+.title-link i{
+    vertical-align: text-bottom;
+    color: #e5424f;
+}
+
+.one-dot-link.is-selected{
+}
+
+.no-touch .onepage-pagination .cd-label {
+    color: black;
+}
+
+#amelia-app-booking #am-step-booking{
+    /*max-width: inherit !important;*/
+    /*background: -webkit-radial-gradient(left top , circle cover , rgb(123, 67, 244) , rgb(242, 62, 137) 48% , rgb(244, 103, 80) 100%) !important;*/
+    /*margin: 0 !important;*/
+    border-radius: 0 !important;
+    border: 0 !important;
+    background: url(https://devahooga.molengeek.com/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0092.jpg) no-repeat center left, url(https://devahooga.molengeek.com/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0142.jpg) !important;
+    background-position: 30% 30% !important;
+}
+
+
+#nav-icons{
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    top: 150px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f3f3f3;
+    z-index: 2999;
+}
+
+#nav-icons *{
+}
+
+.txt_paragraphe p span{
+    font-size: 20px !important;
+}
+
+#bar-fixed-top>.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#bar-fixed-top h3 a{
+    color: black
+}
+
+#bar-fixed-top span{
+    color: #ef5602;
+    font-size: 9px;
+}
+
+li label#label_1_32_0{
+    /* display: inherit !important; */
+}
+
+.tech{
+    display: flex;
+    flex-direction: column;
+}
+.tech strong{
+    padding-right: 10px;
+    /* font-size: 14px; */
+}
+
+.tech li::first-letter{
+    text-transform: uppercase;
+}
+
+.tech li {
+    font-size: 14px;
+}
+
+.tech *::first-letter {
+    text-transform: uppercase;
+}
+
+.image-choices-field.image-choices-show-labels .image-choices-choice-text{
+    display: none !important;
+}
+
+@media only screen and (max-width: 641px){
+    .gform_wrapper .ginput_container span:not(.ginput_price){
+        margin: 1px !important;
+    }
+}
+
+.color_picker{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.color_picker *{
+    padding: 10px;
+    /* height: 10px; */
+    border: 1px solid #cec7c7;
+    border-radius: 2px;
+}
+
+.parent_color{
+    position: absolute;
+    z-index: 4000;
+    width: 100%;
+    padding: 2%;
+    background-color: #f7f7f7;
+    border: 0.5px solid #cec7c7;
+    border-radius: 2px;
+}
+
+.parent_color:hover{
+    cursor: pointer;
+}
+
+.color_picker_buttons{
+    font-size: 14px;
+    font-family: 'SF-Pro-Display', Roboto, Sans-Serif;
+}
+.color_picker_buttons button{
+    background-color: #ffffff00;
+    color: black;
+    padding: 5px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+.color_picker_buttons button:hover{
+    background-color: #4ca9df;
+    color: #e5424f;
+    border-color: #4ca9df;
 }
