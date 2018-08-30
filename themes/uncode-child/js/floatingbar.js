@@ -10,11 +10,105 @@
     });
 })(jQuery);
 
+function color_picker_isclicked() {
+    document.body.addEventListener("click", function (event) {
+        var color_picker = document.querySelector(".parent_color");
+        if (color_picker != null && color_picker.contains(event.target)) {
+            console.log("Inside div");
+        } else {
+            console.log("Outside div");
+            color_picker_close();
+            if (!color_picker_exist) {
+                color_picker_not_selected();
+            }
+        }
+        // event.stopPropagation()
+    });
+};
+
+function color_picker_exist() {
+    return document.querySelector(".parent_color");
+}
+
+function colorpiker(json) {
+    var parent_background = document.createElement("div");
+    parent_background.setAttribute("class", "parent_color");
+    var background_color = document.createElement("div");
+    background_color.setAttribute("class", "color_picker");
+
+    parent_background.appendChild(background_color);
+    for (ele in json) {
+        background_color.innerHTML += "<div class='color' data-color=" + json[ele].code +
+            " style='background-color:" +
+            json[ele].rgb_hex.toLowerCase() + "'></div>";
+    }
+    color_picker_buttons(parent_background);
+    return parent_background;
+}
+
+function color_picker_clicked(color_picker) {
+    if (color_picker == null || color_picker == undefined) {
+        console.log("error");
+    }
+    color_picker.addEventListener("click", function (evt) {
+        if (evt.currentTarget !== evt.target) {
+            var one_color_clicked = evt.toElement;
+            if (one_color_clicked == undefined || this.className !== "parent_color") {
+                color_picker_close();
+                color_picker_not_selected();
+            }
+            if (evt.toElement.className == "color") {
+                color_picker_img_color(this, one_color_clicked.style.backgroundColor);
+                color_picker_close();
+            }
+        }
+        evt.stopPropagation();
+    })
+    color_picker_isclicked();
+}
+
+function color_picker_img_color(element, color) {
+    var parent = element.parentElement.querySelector(".image-choices-choice-selected");
+    if (parent.querySelector(".image-choices-choice-image-wrap") !== null) {
+        var img_btn = parent.querySelector(".image-choices-choice-image-wrap");
+        img_btn.setAttribute("style", "background-image:inherit;background-color:" + color);
+    }
+
+}
+
+function color_picker_buttons(parent_color_picker) {
+    parent_color_picker.innerHTML += "<div class='color_picker_buttons' style='text-align:center'><button>Cancel</button></div>";
+    color_picker_control_window(parent_color_picker.querySelector("button"));
+}
+
+function color_picker_control_window(button) {
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+        color_picker_close();
+        color_picker_not_selected()
+    });
+}
+
+function color_picker_close() {
+    if (document.querySelector('div.parent_color') != null) {
+        // $("div.parent_color").css({
+        //     "display": "none"
+        // });
+        $("div.parent_color").toggle();
+    }
+
+}
+
+function color_picker_not_selected() {
+    $(".gchoice_1_32_8").removeClass("image-choices-choice-selected");
+}
+
 jQuery(document).ready(function () {
     var pageShop = $("article").html();
-
     // if i'm not in page shop woocommerce then action
     if (pageShop == null) {
+        var color_picker_active = false;
+
         var width = window.innerWidth;
         if (width >= 960) {
             //show bar bottom
@@ -47,34 +141,41 @@ jQuery(document).ready(function () {
 
         // title of product
         var title = $(".uncont>.product_title.entry-title").html();
-        
+
         //get desciption
         if (document.querySelector("#description") != null) {
             var description = document.querySelector("#description");
-            
-            $.getJSON("./../../wp-content/themes/uncode-child/file-txt.json",function (data) {
-                console.log(data);
-            })
-            // var li = document.createElement("li");
-            // // li.appendChild(document.createTextNode(title));
-            // description.appendChild(li);
         }
 
         var produits = document.querySelectorAll("input[id^='choice_']");
         produits.forEach(function (produit) {
             produit.addEventListener("click", function (event) {
+                //bouton color action
+                if (this.id == "choice_1_32_8") {
+                    var this_element_parent = document.querySelector("#field_1_32");
+                    if (color_picker_exist()) {
+                        // document.querySelector(".parent_color").setAttribute("style", "display:block");
+                        return;
+                    }
+                    $.getJSON("./../../wp-content/themes/uncode-child/color_ral.json", function (json) {
+                        //creation colorpicker;
+                        var color_picker = colorpiker(json);
+                        if (color_picker != null) {
+                            this_element_parent.appendChild(color_picker);
+                            color_picker_clicked(color_picker);
+                        }
+                    })
+                }
+
                 var tabElementsProduct = [];
                 tabElementsProduct.push(title);
                 produits.forEach(function (self) {
                     if (self.checked) {
-                        console.log("checked");
                         var label = self.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerHTML;
                         label += ": ";
                         if (document.querySelector(".image-choices-choice-text") != null) {
                             label += document.querySelector(".image-choices-choice-text").innerHTML;
                             label += self.parentElement.querySelector("label").textContent;
-                            console.log(self.parentElement.querySelector("label").textContent);
-                            console.log("hello");
                         } else {
                             let doc = new DOMParser().parseFromString(self.parentElement.querySelector("label").innerHTML, 'text/html');
                             label += doc.body.firstChild.textContent;
@@ -82,9 +183,7 @@ jQuery(document).ready(function () {
                         tabElementsProduct.push(label);
                     }
                 });
-                console.log(this);
                 var label = this.parentElement.parentElement.parentElement.parentElement.querySelector("label").innerText;
-                console.log(label);
 
                 var selection = document.querySelector("select[id='pa_" + label.toLowerCase() + "']");
                 if (selection != null) {
@@ -95,14 +194,12 @@ jQuery(document).ready(function () {
                     }
                     var otherindex = 1;
                     for (let index = 0; index < selection.length; index++) {
-                        console.log(selection[index].label + " : " + label + " index: " + index);
-                        if (selection[index].label == label) {
-                            console.log("object");
+                        var reg = new RegExp(selection[index].label);
+                        if (reg.test(label)) {
                             otherindex = index;
                         }
                     }
-                    console.log(otherindex);
-                    console.log(selection.options);
+
                     selection.options[otherindex].selected = true;
                     fireEvent(selection, 'change');
                 }
@@ -143,18 +240,17 @@ jQuery(document).ready(function () {
             }
         }, 2000);
 
-        var selection = document.querySelector("select[id='pa_engine']");
+        var selection = document.querySelector("select[id='pa_model']");
         var otherindex = 1;
         for (let index = 0; index < selection.length; index++) {
-            if (selection[index].label == "Your Legs" || selection[index].label == "Hybrid 24v") {
+            var chaine = selection[index].label;
+            // debut valeur par defaut
+            if (/Essential/.test(chaine)) {
                 otherindex = index;
             }
         }
         selection.options[otherindex].selected = true;
         fireEvent(selection, 'change');
-        console.log(document.querySelector("#total"));
-        console.log("ici");
-
 
         var btnDefault;
         if (document.querySelector("button[name^='add-to-cart']") != null) {
@@ -264,7 +360,7 @@ jQuery(document).ready(function () {
             // var li = document.createElement("li");tab-technicals-73472
             // li.appendChild(document.createTextNode(title));
             // description.appendChild(li);
-            $.getJSON("./../../wp-content/themes/uncode-child/file-txt.json",function (data) {
+            $.getJSON("./../../wp-content/themes/uncode-child/file-txt.json", function (data) {
                 console.log(data);
                 description.innerHTML = data.language.fr.options_configurateur.default;
             })
@@ -342,5 +438,5 @@ jQuery(document).ready(function () {
         })
     }
 
-    
+
 })
