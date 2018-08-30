@@ -312,48 +312,8 @@ jQuery(document).ready(function () {
             }
         }
 
-    var parent = document.querySelector(".product_totals").parentNode;
-    parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"),document.querySelector(".product_totals"));
-
-    var content = document.querySelector(".tab-content");
-    var tab_pane = document.createElement("div");
-    tab_pane.setAttribute("class","tab-pane fade limit-width single-h-padding");
-    tab_pane.setAttribute("id","tab-technicals-73472");
-    tab_pane.appendChild(document.createTextNode("Jefferson"));
-    content.appendChild(tab_pane);
-
-    var tab_pane2 = document.createElement("div");
-    tab_pane2.setAttribute("class","tab-pane fade limit-width single-h-padding active in");
-    tab_pane2.setAttribute("id","description");
-    content.appendChild(tab_pane2);
-   
-    var navtabs = document.querySelector(".nav-tabs");
-    var li_nav = document.createElement("li");
-    li_nav.setAttribute("class","additional_information_tab");
-    li_nav.setAttribute("id","tab-title-additional_information1");
-    li_nav.setAttribute("role","tab");
-    li_nav.setAttribute("aria-controls","tab-additional_information1");
-    li_nav.innerHTML = '<a href="#tab-technicals-73472" data-toggle="tab"><span>Technicals Specifications</span></a> ';
-    // navtabs.appendChild(li_nav);
-
-    var li_nav2 = document.createElement("li");
-    li_nav2.setAttribute("class","additional_information_tab active in");
-    li_nav2.setAttribute("id","tab-title-additional_information2");
-    li_nav2.setAttribute("role","tab");
-    li_nav2.setAttribute("aria-controls","tab-additional_information2");
-    li_nav2.innerHTML = '<a href="#description" data-toggle="tab"><span>Configuration Summary</span></a> ';
-    // navtabs.appendChild(li_nav2);
-
-    var reviews = document.querySelector(".reviews_tab");
-    var reviews_parent = reviews.parentNode;
-    reviews_parent.insertBefore(li_nav2,reviews);
-    reviews_parent.insertBefore(li_nav,reviews);
-    console.log(reviews);
-    //document.querySelector("#tab-title-additional_information").remove();
-    if(document.querySelector("#tab-additional_information-73472") != null) {
-        document.querySelector("#tab-additional_information-73472").remove();
-        //document.querySelector("#tab-additional_information-74074").remove();
-    }
+        var parent = document.querySelector(".product_totals").parentNode;
+        parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"),document.querySelector(".product_totals"));
 
         var content = document.querySelector(".tab-content");
         var tab_pane = document.createElement("div");
