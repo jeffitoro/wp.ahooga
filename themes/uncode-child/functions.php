@@ -22,7 +22,7 @@ function wpb_floats_bar() {
     /*top bar*/
     wp_enqueue_script( 'wpb-topbar', get_stylesheet_directory_uri() . '/js/floatingbar2.js', array( 'jquery' ) );
     /*color picker*/
-    wp_enqueue_script( 'wpb-colorpicker', get_stylesheet_directory_uri() . '/js/colorpicker.js', array( 'jquery' ) );
+    /*wp_enqueue_script( 'wpb-colorpicker', get_stylesheet_directory_uri() . '/js/colorpicker.js', array( 'jquery' ) );*/
 }
 add_action( 'wp_enqueue_scripts', 'wpb_floats_bar' );
 /*end footer bar*/
