@@ -420,6 +420,27 @@ jQuery(document).ready(function () {
             }
             other_i++;
         })
+        
+        warranty = document.querySelectorAll("#input_1_45>li>label");
+        var other_i3 = 0;
+        warranty.forEach(function (ele) {
+            ele.setAttribute("style", "font-weight:700");
+            ele.setAttribute("style", "text-align:left");
+
+        })
+        warranty.forEach(function (ele) {
+            switch (other_i3) {
+                case 0:
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>5 years On Frame And Fork.</br>2 years on all other components.</div>";
+                    break;
+                case 1:
+                    ele.innerHTML += "<br/><div style='left:0;font-weight:400;display:contents'>On all other components</div>";
+                    break;
+                default:
+                    break;
+            }
+            other_i3++;
+        })
 
         var seatpost = document.querySelectorAll("#input_1_17>li>label");
         var other_i2 = 0;
