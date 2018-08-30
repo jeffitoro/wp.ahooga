@@ -313,7 +313,7 @@ jQuery(document).ready(function () {
         }
 
         var parent = document.querySelector(".product_totals").parentNode;
-        parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"), document.querySelector(".product_totals"));
+        parent.insertBefore(document.querySelector(".woocommerce-variation-add-to-cart"),document.querySelector(".product_totals"));
 
         var content = document.querySelector(".tab-content");
         var tab_pane = document.createElement("div");
