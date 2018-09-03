@@ -348,7 +348,17 @@ p.nominalBounds = new cjs.Rectangle(-77,-15,147,147.1);
 		/* Gauche */
 		this.BTDroite.x = window.innerWidth;
 		var scene = this;
+		var srHeight = document.querySelector('#page-header').clientHeight;
+		scene.BTDroite.y = srHeight / 2;
+		scene.BTGauche.y = srHeight / 2;
 		window.onresize = function () {
+			if(document.querySelector('#page-header')){
+// 				var srHeight = document.querySelector('#page-header').clientHeight;
+// 				scene.BTDroite.y = srHeight / 2;
+// 				scene.BTGauche.y = srHeight / 2;
+				
+				console.log(scene.BTDroite);
+			}
 			scene.BTDroite.x = window.innerWidth;
 			console.log(scene.BTDroite.x);
 		}

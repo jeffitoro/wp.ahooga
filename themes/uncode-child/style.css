@@ -8,6 +8,26 @@ Version: 1.0.0
 Text Domain: uncode
 */
 
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed';
+src: url('fonts/HelveticaNeueLTStd-Cn.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-medium';
+src: url('fonts/HelveticaNeueLTStd-MdCn.otf');
+}
+
+body{
+	font-family: 'HelveticaNeueLTStd-condensed';
+}
+
+h1,h2,h3,a{
+	font-family: HelveticaNeueLTStd-condensed-medium;
+}
+
+
+
 @media only screen and (min-width:800px) and (max-width:1200px){
     #bar-fixed-bottom>.row{
         width: 90% !important;

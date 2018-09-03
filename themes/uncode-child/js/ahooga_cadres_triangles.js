@@ -3006,7 +3006,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/resized.png?1535637902410", id:"resized"}
+		{src:"https://devahooga.molengeek.com/wp-content/uploads/2018/08/resized.png", id:"resized"}
 	],
 	preloads: []
 };
