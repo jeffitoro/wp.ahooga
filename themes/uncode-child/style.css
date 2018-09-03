@@ -563,6 +563,7 @@ span.image-choices-choice-image-wrap{
 }
 
 /* start top bar */
+@media only screen and (min-width:959px){
 
 .menu-burger{
     /* cursor: pointer; */
@@ -573,6 +574,10 @@ span.image-choices-choice-image-wrap{
 .menu-burger li{
     font-size: 14px;
     width: 25%;
+    text-align: center;
+}
+
+.menu-burger li:last-child{
     text-align: right;
 }
 
@@ -605,5 +610,5 @@ span.image-choices-choice-image-wrap{
 #logo-container-mobile{
     display: none;
 }
-
+}
 /* end top bar */
