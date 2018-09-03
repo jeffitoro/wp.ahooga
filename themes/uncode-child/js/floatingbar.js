@@ -118,7 +118,6 @@ jQuery(document).ready(function () {
         window.onscroll = function () {
             var sizescroll = window.pageYOffset;
             var sizewidth = window.innerWidth;
-            console.log(sizewidth);
             if (sizewidth < 960) {
                 if (sizescroll < 100) {
                     $("#bar-fixed-bottom").fadeOut();
@@ -268,7 +267,6 @@ jQuery(document).ready(function () {
                 0, 0, 0, 0,
                 false, false, false, false,
                 0, null);
-            console.log(btnDefault);
             btnDefault.dispatchEvent(mEvent);
         })
 
@@ -293,10 +291,7 @@ jQuery(document).ready(function () {
 
         //hide other form for produit	
         document.querySelectorAll("select[id^='pa_']").forEach(function (ele) {
-            console.log(ele.id);
-            // if(ele.id != "pa_color"){	
             ele.parentElement.parentElement.setAttribute("style", "display:none");
-            // }	
         })
 
         function fireEvent(element, event) {
@@ -348,7 +343,6 @@ jQuery(document).ready(function () {
         var reviews_parent = reviews.parentNode;
         reviews_parent.insertBefore(li_nav2, reviews);
         reviews_parent.insertBefore(li_nav, reviews);
-        console.log(reviews);
         document.querySelector("#tab-title-additional_information").remove();
         // document.querySelector("#tab-additional_information-74074").remove();
         if (document.querySelector("#tab-additional_information-73472") != null) {
@@ -361,17 +355,9 @@ jQuery(document).ready(function () {
             // li.appendChild(document.createTextNode(title));
             // description.appendChild(li);
             $.getJSON("./../../wp-content/themes/uncode-child/file-txt.json", function (data) {
-                console.log(data);
                 description.innerHTML = data.language.fr.options_configurateur.default;
             })
         }
-
-        var labels = document.querySelectorAll("li>label.gfield_label");
-
-
-        var radio = document.querySelectorAll(".gfield_radio");
-
-        console.log(radio);
 
         var models = document.querySelectorAll("#input_1_24>li>label");
         var i = 0;
