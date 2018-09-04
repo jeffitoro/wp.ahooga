@@ -12,13 +12,12 @@
 
 jQuery(document).ready(function () {
     var isFolding = $("#shop").html();
-
+    
     // if i'm in page shop woocommerce then action
     if (isFolding != null) {
         var sizenav = $(".menu-wrapper").css("height");
         var menumobile = document.querySelector(".mobile-menu-button");
         menumobile.addEventListener("click", function () {
-            console.log("size: "+$(".vmenu-wrap-cell").css("width"));
             var sizenav_mobile = $(".vmenu-wrap-cell").css("width");
             if (menumobile.classList.contains("close")) {
                 sizemenu = $("article").css("width");
@@ -31,7 +30,18 @@ jQuery(document).ready(function () {
                 $("#nav-icons").css({"width":"100%","margin":"0 auto","padding":"inherit"});
                 sizemenu = $("article").css("width");
             }
+            if($("body").hasClass("off-opened")&&window.innerWidth>960){
+                var items =document.querySelectorAll("li[id^='menu-item-']");
+                items.forEach(function (ele) {
+                    if(ele.querySelector("a[title='Test ride']")!=null ||ele.querySelector("a[title='E-Shop']")!=null){
+                        ele.setAttribute("style","display:none");
+                    }
+                })
+            }
         })
+        if(parseInt(sizenav)==0){
+            sizenav ="81px";
+        }
         $("#nav-icons").css({
             "top": sizenav
         });

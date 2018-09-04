@@ -23,7 +23,7 @@ body{
 }
 
 h1,h2,h3,a{
-	font-family: HelveticaNeueLTStd-condensed-medium;
+	font-family: 'HelveticaNeueLTStd-condensed-medium';
 }
 
 
@@ -384,6 +384,10 @@ span.image-choices-choice-image-wrap{
     margin: 0px;
 }
 
+.icon-marge a{
+    color: rgb(38, 38, 38) !important;
+}
+
 .center-icons{
     display: flex;
     text-align: center;
@@ -448,7 +452,7 @@ span.image-choices-choice-image-wrap{
 }
 .title-link i{
     vertical-align: text-bottom;
-    color: #e5424f;
+    color: #006cff;
 }
 
 .one-dot-link.is-selected{
@@ -632,3 +636,18 @@ span.image-choices-choice-image-wrap{
 }
 }
 /* end top bar */
+
+/* line in menu display none */
+#masthead .menu-container.menu-borders {
+    border: inherit !important;
+}
+
+#masthead{
+    position: relative !important;
+}
+
+/* input newsletter */
+input[value="Newsletter"]{
+    height: 47px !important;
+}
+

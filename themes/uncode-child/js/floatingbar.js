@@ -126,6 +126,14 @@ jQuery(document).ready(function () {
                     $("#bar-fixed-bottom").fadeIn();
                     $(".menu-wrapper").fadeOut();
                 }
+            }else{
+                if (sizescroll < 100) {
+                    $("#bar-fixed-bottom").fadeOut();
+                    $(".menu-wrapper").fadeIn();
+                } else {
+                    $("#bar-fixed-bottom").fadeIn();
+                    $(".menu-wrapper").fadeOut();
+                }
             }
         }
 
