@@ -778,7 +778,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Image.png", id:"Image"}
+		{src:"https://devahooga.molengeek.com/wp-content/uploads/2018/08/Image.png", id:"Image"}
 	],
 	preloads: []
 };

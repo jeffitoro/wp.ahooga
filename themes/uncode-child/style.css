@@ -8,6 +8,26 @@ Version: 1.0.0
 Text Domain: uncode
 */
 
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed';
+src: url('fonts/HelveticaNeueLTStd-Cn.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-medium';
+src: url('fonts/HelveticaNeueLTStd-MdCn.otf');
+}
+
+body{
+	font-family: 'HelveticaNeueLTStd-condensed';
+}
+
+h1,h2,h3,a{
+	font-family: 'HelveticaNeueLTStd-condensed-medium';
+}
+
+
+
 @media only screen and (min-width:800px) and (max-width:1200px){
     #bar-fixed-bottom>.row{
         width: 90% !important;
@@ -364,6 +384,10 @@ span.image-choices-choice-image-wrap{
     margin: 0px;
 }
 
+.icon-marge a{
+    color: rgb(38, 38, 38) !important;
+}
+
 .center-icons{
     display: flex;
     text-align: center;
@@ -428,7 +452,7 @@ span.image-choices-choice-image-wrap{
 }
 .title-link i{
     vertical-align: text-bottom;
-    color: #e5424f;
+    color: #006cff;
 }
 
 .one-dot-link.is-selected{
@@ -561,3 +585,69 @@ span.image-choices-choice-image-wrap{
     color: white;
     border-color: rgb(38, 38, 38);
 }
+
+/* start top bar */
+@media only screen and (min-width:959px){
+
+.menu-burger{
+    /* cursor: pointer; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-burger li{
+    font-size: 14px;
+    width: 25%;
+    text-align: center;
+}
+
+.menu-burger li:last-child{
+    text-align: right;
+}
+
+.menu-burger li a{
+    text-transform: uppercase;
+    color: white;
+}
+
+.menu-burger li>.mobile-menu-button{
+    padding: 0 !important;
+    vertical-align: middle;
+}
+
+#menu-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+}
+
+#menu-top ul {
+    width: 25%;
+    margin: 0 !important;
+}
+
+#menu-top ul li{
+    vertical-align: center;
+}
+
+#logo-container-mobile{
+    display: none;
+}
+}
+/* end top bar */
+
+/* line in menu display none */
+#masthead .menu-container.menu-borders {
+    border: inherit !important;
+}
+
+#masthead{
+    position: relative !important;
+}
+
+/* input newsletter */
+input[value="Newsletter"]{
+    height: 47px !important;
+}
+

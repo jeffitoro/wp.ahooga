@@ -21,8 +21,8 @@ function wpb_floats_bar() {
     wp_enqueue_script( 'wpb-footerbar', get_stylesheet_directory_uri() . '/js/floatingbar.js', array( 'jquery' ) );
     /*top bar*/
     wp_enqueue_script( 'wpb-topbar', get_stylesheet_directory_uri() . '/js/floatingbar2.js', array( 'jquery' ) );
-    /*color picker*/
-    /*wp_enqueue_script( 'wpb-colorpicker', get_stylesheet_directory_uri() . '/js/colorpicker.js', array( 'jquery' ) );*/
+    /*principal bar*/
+    wp_enqueue_script( 'wpb-principalbar', get_stylesheet_directory_uri() . '/js/principalbar.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'wpb_floats_bar' );
 /*end footer bar*/
