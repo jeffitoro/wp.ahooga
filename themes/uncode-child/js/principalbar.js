@@ -1,6 +1,7 @@
 jQuery(document).ready(function () {
-    resize_bar();
-    
+    /*resize_bar();*/
+    check_burger_clicked();
+    check_payments();  
 })
 
 function resize_bar() {
@@ -46,4 +47,68 @@ function resize_bar() {
             }
         }
     })
+}
+
+function check_burger_clicked(){
+    var menumobile = document.querySelector(".mobile-menu-button");
+    menumobile.addEventListener("click", function () {
+        if($("body").hasClass("off-opened")&&window.innerWidth>960){
+             var items =document.querySelectorAll("li[id^='menu-item-']");
+             items.forEach(function (ele) {
+                 if(ele.querySelector("a[title='Test ride']")!=null ||ele.querySelector("a[title='E-Shop']")!=null){
+                     //ele.setAttribute("style","display:none");
+                 }
+                 if(ele.querySelector("a[title='en']")!=null){
+                     create_div(ele);
+                 }else if(ele.querySelector("a[title='nl']")!=null){
+                     create_div(ele);
+                 }else if(ele.querySelector("a[title='fr']")!=null){
+                     create_div(ele);
+                 }
+             })
+        } 
+    })
+
+}
+
+function create_div(child){
+    var div = null;
+    var menu = null;
+    if(document.querySelector("#div-languages")!=null){
+        console.log("div déjà crée");
+        div = document.querySelector("#div-languages");
+    }else{
+        div = document.createElement("div");
+        div.id = "div-languages";
+        menu = document.querySelector("#menu-menu_top");
+        menu.insertBefore(div,menu.childNodes[0]);
+    }
+    console.dir(child); 
+    if(document.querySelector(child.id)!=null){
+        console.log("child exist");
+    }else{
+        div.appendChild(child);
+    }   
+}
+
+function check_payments(){
+    if(document.querySelector("#payment")!=null){
+        var payment = document.querySelector("#payment");
+        console.log(payment);
+        var logo_payment = document.querySelector("#payment ul").querySelectorAll("li input");
+	if(logo_payment!=null){
+            logo_payment.forEach(function (ele){
+                console.log(ele);
+                ele.addEventListener("click",function(evt){
+                    console.log('helo');
+                    if(!this.classList.contains("payment-border")){
+                        this.classList.add("payment-border");
+                    }else{
+                        this.classList.remove("payment-border");
+                    }
+                    evt.stopPropagation();
+                })
+            })
+        }       
+    }
 }

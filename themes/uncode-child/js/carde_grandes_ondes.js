@@ -644,7 +644,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/_20180712_Ahooga_studio38_0060.png", id:"_20180712_Ahooga_studio38_0060"}
+		{src:"/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0060.png", id:"_20180712_Ahooga_studio38_0060"}
 	],
 	preloads: []
 };

@@ -9,8 +9,13 @@ Text Domain: uncode
 */
 
 @font-face{
-font-family: 'HelveticaNeueLTStd-condensed';
-src: url('fonts/HelveticaNeueLTStd-Cn.otf');
+font-family: 'HelveticaNeueLTStd-condensed-black';
+src: url('fonts/HelveticaNeueLTStd-BlkCn.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-black-italique';
+src: url('fonts/HelveticaNeueLTStd-BlkCnO.otf');
 }
 
 @font-face{
@@ -18,12 +23,50 @@ font-family: 'HelveticaNeueLTStd-condensed-medium';
 src: url('fonts/HelveticaNeueLTStd-MdCn.otf');
 }
 
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed';
+src: url('fonts/HelveticaNeueLTStd-Cn.otf');
+}
+
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-thin';
+src: url('fonts/HelveticaNeueLTStd-ThCn.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-thin-italique';
+src: url('fonts/HelveticaNeueLTStd-ThCnO.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-light';
+src: url('fonts/HelveticaNeueLTStd-LtCn.otf');
+}
+
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-light-italique';
+src: url('fonts/HelveticaNeueLTStd-LtCnO.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-ultralight';
+src: url('fonts/HelveticaNeueLTStd-UltLtCn.otf');
+}
+
+@font-face{
+font-family: 'HelveticaNeueLTStd-condensed-ultralight-italique';
+src: url('fonts/HelveticaNeueLTStd-UltLtCnO.otf');
+}
+
+
 body{
-	font-family: 'HelveticaNeueLTStd-condensed';
+	font-family: 'HelveticaNeueLTStd-condensed-light';
 }
 
 h1,h2,h3,a{
-	font-family: 'HelveticaNeueLTStd-condensed-medium';
+	font-family: 'HelveticaNeueLTStd-condensed-black';
 }
 
 
@@ -337,6 +380,7 @@ li label {
  
 .style-light .footer-links a{
     color: white !important;
+    font-family: 'HelveticaNeueLTStd-condensed'; 
 }
 
 span.image-choices-choice-image-wrap{
@@ -380,12 +424,14 @@ span.image-choices-choice-image-wrap{
     padding: 0.5%;
 }
 .icon-marge h3{
-    padding: 3px 3px 0px 3px;
-    margin: 0px;
 }
 
 .icon-marge a{
     color: rgb(38, 38, 38) !important;
+    font-family: 'HelveticaNeueLTStd-condensed-medium';
+    font-weight: inherit !important;
+    padding: 3px 3px 0px 3px;
+    margin: 0px;
 }
 
 .center-icons{
@@ -451,7 +497,7 @@ span.image-choices-choice-image-wrap{
     font-size: 72px;
 }
 .title-link i{
-    vertical-align: text-bottom;
+    vertical-align: middle;
     color: #006cff;
 }
 
@@ -459,7 +505,9 @@ span.image-choices-choice-image-wrap{
 }
 
 .no-touch .onepage-pagination .cd-label {
-    color: black;
+    color: rgb(38,38,38);
+    border: 1px solid rgb(38,38,38) !important;
+    border-radius: 2px;
 }
 
 #amelia-app-booking #am-step-booking{
@@ -500,8 +548,8 @@ span.image-choices-choice-image-wrap{
 }
 
 #bar-fixed-top span{
-    color: #ef5602;
-    font-size: 9px;
+    color: #086bfc;
+    font-size: 11px;
 }
 
 .tech{
@@ -587,17 +635,16 @@ span.image-choices-choice-image-wrap{
 }
 
 /* start top bar */
-@media only screen and (min-width:959px){
+/*@media only screen and (min-width:959px){
 
 .menu-burger{
-    /* cursor: pointer; */
     display: flex;
     justify-content: flex-end;
 }
 
 .menu-burger li{
-    font-size: 14px;
-    width: 25%;
+    font-size: 19px;
+    width: 28%;
     text-align: center;
 }
 
@@ -606,8 +653,8 @@ span.image-choices-choice-image-wrap{
 }
 
 .menu-burger li a{
-    text-transform: uppercase;
     color: white;
+    font-family: 'HelveticaNeueLTStd-condensed-medium';
 }
 
 .menu-burger li>.mobile-menu-button{
@@ -634,20 +681,115 @@ span.image-choices-choice-image-wrap{
 #logo-container-mobile{
     display: none;
 }
-}
+}*/
 /* end top bar */
 
 /* line in menu display none */
-#masthead .menu-container.menu-borders {
+/*#masthead .menu-container.menu-borders {
     border: inherit !important;
 }
 
 #masthead{
     position: relative !important;
-}
+}*/
 
 /* input newsletter */
-input[value="Newsletter"]{
+input[value="Subscribe"]{
     height: 47px !important;
+    text-transform: capitalize !important;
+    font-size: 15px !important;
+}
+/* input your mail */
+input[name="your-mail"]{
+    font-size: 15px !important;
+}
+#div-languages{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 114px;
+    padding-left: 17%;
+}
+#div-languages *{
+    width: 50px;
 }
 
+#div-languages a{
+    font-size: 24px !important;
+    padding: 4px !important;
+}
+
+#menu-menu_top a {
+    /*padding: 0 !important;*/
+    font-size: 38px;
+    font-family: 'HelveticaNeueLTStd-condensed-black';
+    font-weight: 900 !important;
+    text-transform: inherit !important;
+    text-align: left
+}
+
+#menu-menu_top * {
+    text-align: left !important;
+}
+
+#menu-menu_top{
+    display: flex;
+    flex-flow: column;
+}
+
+.style-color-wayh-bg{
+ /*   position: absolute;*/
+}
+
+.border-accent-color{
+    border: 1px solid rgb(38,38,38);
+    border-radius: 2px;
+}
+.style-accent-bg{
+    background-color: inherit !important;
+    color: white;
+}
+
+.background-bottom{
+    background-image: linear-gradient(#bdc3c7,#2c3e50);
+}
+
+/* button view cart woocommerce */
+a.button.wc-forward.btn-link{
+    padding: 10px !important;
+}
+
+/*woocommerce checkout*/
+#payment ul{
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+    /*align-items: baseline;*/
+}
+#payment ul *{
+    /*width: 200px !important;*/
+    margin-top: 5px !important;
+}
+#payment ul li input[type="radio"]+label{
+    padding: 23px 14px !important;
+    border: inherit !important;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.border-payment{
+    border: 1px solid blue;
+    border-radius: 2px;
+}
+
+#payment ul li input[type=radio]{
+    display: inherit !important;
+    margin: 0 auto !important;
+}
+
+.payment_method_ppec_paypal p{
+    display: none !important;
+}

@@ -322,7 +322,6 @@ jQuery(document).ready(function () {
         var tab_pane = document.createElement("div");
         tab_pane.setAttribute("class", "tab-pane fade limit-width single-h-padding active in");
         tab_pane.setAttribute("id", "tab-technicals-73472");
-        tab_pane.appendChild(document.createTextNode("Jefferson"));
         content.appendChild(tab_pane);
 
         var tab_pane2 = document.createElement("div");
@@ -339,17 +338,17 @@ jQuery(document).ready(function () {
         li_nav.innerHTML = '<a href="#tab-technicals-73472" data-toggle="tab"><span>Technicals Specifications</span></a> ';
         // navtabs.appendChild(li_nav);
 
-        var li_nav2 = document.createElement("li");
-        li_nav2.setAttribute("class", "additional_information_tab");
-        li_nav2.setAttribute("id", "tab-title-additional_information2");
-        li_nav2.setAttribute("role", "tab");
-        li_nav2.setAttribute("aria-controls", "tab-additional_information2");
-        li_nav2.innerHTML = '<a href="#description" data-toggle="tab"><span>Configuration Summary</span></a> ';
-        // navtabs.appendChild(li_nav2);
-
+        //var li_nav2 = document.createElement("li");
+        //li_nav2.setAttribute("class", "additional_information_tab");
+        //li_nav2.setAttribute("id", "tab-title-additional_information2");
+        //li_nav2.setAttribute("role", "tab");
+        //li_nav2.setAttribute("aria-controls", "tab-additional_information2");
+        //li_nav2.innerHTML = '<a href="#description" data-toggle="tab"><span>Configuration Summary</span></a> ';
+        // navtabs.appendChild(li_nav2);      
+  
         var reviews = document.querySelector(".reviews_tab");
         var reviews_parent = reviews.parentNode;
-        reviews_parent.insertBefore(li_nav2, reviews);
+        //reviews_parent.insertBefore(li_nav2, reviews);
         reviews_parent.insertBefore(li_nav, reviews);
         document.querySelector("#tab-title-additional_information").remove();
         // document.querySelector("#tab-additional_information-74074").remove();

@@ -30,14 +30,6 @@ jQuery(document).ready(function () {
                 $("#nav-icons").css({"width":"100%","margin":"0 auto","padding":"inherit"});
                 sizemenu = $("article").css("width");
             }
-            if($("body").hasClass("off-opened")&&window.innerWidth>960){
-                var items =document.querySelectorAll("li[id^='menu-item-']");
-                items.forEach(function (ele) {
-                    if(ele.querySelector("a[title='Test ride']")!=null ||ele.querySelector("a[title='E-Shop']")!=null){
-                        ele.setAttribute("style","display:none");
-                    }
-                })
-            }
         })
         if(parseInt(sizenav)==0){
             sizenav ="81px";

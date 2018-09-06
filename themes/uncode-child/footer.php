@@ -187,7 +187,7 @@ wp_footer(); ?>
 			<div class="footer img-help">
 				<img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/icons8-camion-50-ios.png" alt="">
 				<div>
-					<h4>Ship</h4>
+					<h4>Ships</h4>
 					<h6>1-3 weeks</h5>
 				</div>
 			</div>
@@ -202,55 +202,54 @@ wp_footer(); ?>
 </div>
 <div id="bar-fixed-top" style="display:none">
     <div id="nav-icons" class="row">
-        <div class="col-2" style="padding:5px">
+        <div class="col-2" style="padding: 5px 7px">
             <div class="icon-box-icon fa-container  icon">
-                <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/heightwitdhBBBBicycle_Icon-08-512-copie.png" width="869" height="757" alt="">
+                <a href="#folding-bike" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/ahooga-picto1.png" width="869" height="757" alt="">
                 </a>
             </div>
             <div class="icon-box-content icon-marge">
                 <div class="icon-box-heading icon-box-fa-3x">
-                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
-                        <a href="https://devahooga.molengeek.com/product/folding-bike">Folding Bike</a>
-                    </h3>
+                        <a href="#folding-bike">Folding Bike</a>
                 </div>
             </div>
         </div>
-        <div class="col-2" style="padding:5px">
+        <div class="col-2" style="padding: 5px 7px">
             <div class="icon-box-icon fa-container  icon">
-                <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png"
-                        width="869" height="757" alt="">
+                <a href="#modular-bike" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/ahooga-picto2.png" width="869" height="757" alt="">
                 </a>
             </div>
             <div class="icon-box-content icon-marge">
                 <div class="icon-box-heading icon-box-fa-3x">
-                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
-                        <a href="#">Modular Bike</a>
-                    </h3>
+                        <a href="#modular-bike">Modular Bike</a>
                 </div>
             </div>
             <div class="icon-new">
                 <span>NEW!</span>
             </div>
         </div>
-        <div class="col-2" style="padding:5px">
+        <div class="col-2" style="padding: 5px 7px">
             <div class="icon-box-icon fa-container  icon">
-                <a href="#" class="text-default-color custom-link">
-                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/08/Icon_Black_Folding-Bike.png" width="869" height="757" alt="">
+                <a href="#accessories" class="text-default-color custom-link">
+                    <img src="https://devahooga.molengeek.com/wp-content/uploads/2018/07/Accessories-icon.png" width="869" height="757" alt="">
                 </a>
             </div>
             <div class="icon-box-content icon-marge">
                 <div class="icon-box-heading icon-box-fa-3x">
-                    <h3 class="font-762333 h6 font-weight-500 fontspace-111509">
-                        <a href="#">Folding Bike 36v</a>
-                    </h3>
+                        <a href="#accessories" class="one-dot-link" data-index="5">Accessories</a>
                 </div>
-            </div>
-            <div class="icon-new">
-                <span>NEW!</span>
             </div>
         </div>
     </div>
 </div>
+<script>
+
+  (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
+
+    t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
+
+  })(window, document, '_gscq','script','//widgets.getsitecontrol.com/128919/script.js');
+
+</script>
 </html>
