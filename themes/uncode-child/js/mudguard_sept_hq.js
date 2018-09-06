@@ -150,7 +150,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/mudguard_sept_hq_atlas_.png", id:"mudguard_sept_hq_atlas_"}
+		{src:"/wp-content/uploads/2018/07/mudguard_sept_hq_atlas_.png", id:"mudguard_sept_hq_atlas_"}
 	],
 	preloads: []
 };
