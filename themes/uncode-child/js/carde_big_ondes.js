@@ -609,7 +609,7 @@ p.nominalBounds = new cjs.Rectangle(-202.9,-119.2,406.9,239.5);
 
 
 // stage content:
-(lib.carde_grandes_ondes = function(mode,startPosition,loop) {
+(lib.carde_big_ondes = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Calque_2
@@ -619,22 +619,27 @@ p.nominalBounds = new cjs.Rectangle(-202.9,-119.2,406.9,239.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-	// Calque_4
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f("rgba(255,255,255,0.969)").s().p("A7PArIi1qjIPph4MArGgFPIBZGiMg07Abcg");
-	this.shape.setTransform(561.9,463.8);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+	// triangle (mask)
+	var mask = new cjs.Shape();
+	mask._off = true;
+	mask.graphics.p("EhMHA6tMAAAh1ZMCYPAAAMAAAB1ZgA0vjcIH5aMMAy+gaMIBinYg");
+	mask.setTransform(501,424.3);
 
 	// Calque_3
 	this.instance_1 = new lib.haloo();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(561.9,463.8,1,1,0,0,0,0.5,0.6);
 
+	var maskedShapeInstanceList = [this.instance_1];
+
+	for(var shapedInstanceItr = 0; shapedInstanceItr < maskedShapeInstanceList.length; shapedInstanceItr++) {
+		maskedShapeInstanceList[shapedInstanceItr].mask = mask;
+	}
+
 	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(448,429,1095.5,730.2);
+p.nominalBounds = new cjs.Rectangle(448,429,1095.5,730.1);
 // library properties:
 lib.properties = {
 	id: '45396DEB275D4E18ABE466B9E97DCDCB',
@@ -644,7 +649,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"/wp-content/uploads/2018/07/20180712_Ahooga_studio38_0060.png", id:"_20180712_Ahooga_studio38_0060"}
+		{src:"images/_20180712_Ahooga_studio38_0060.png", id:"_20180712_Ahooga_studio38_0060"}
 	],
 	preloads: []
 };

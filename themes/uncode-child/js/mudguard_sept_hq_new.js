@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"mudguard_sept_hq_atlas_", frames: [[1802,5404,1800,2700],[1802,2702,1800,2700],[0,5404,1800,2700],[3604,2702,1800,2700],[0,2702,1800,2700],[3604,0,1800,2700],[5406,0,1800,2700],[0,0,1800,2700],[5406,2702,1800,2700],[3604,5404,1800,2700],[1802,0,1800,2700]]}
+		{name:"mudguard_sept_hq_new_atlas_", frames: [[3604,0,1800,2700],[0,2702,1800,2700],[0,0,1800,2700],[0,5404,1800,2700],[1802,0,1800,2700],[5406,0,1800,2700],[1802,2702,1800,2700],[1802,5404,1800,2700],[3604,5404,1800,2700],[5406,2702,1800,2700],[3604,2702,1800,2700]]}
 ];
 
 
@@ -12,84 +12,84 @@ lib.ssMetadata = [
 
 
 (lib._20180712_Ahooga_studio38_fender1 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender10 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender11 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender2 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender3 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender4 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender5 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender6 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender7 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender8 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib._20180712_Ahooga_studio38_fender9 = function() {
-	this.spriteSheet = ss["mudguard_sept_hq_atlas_"];
+	this.spriteSheet = ss["mudguard_sept_hq_new_atlas_"];
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
 // stage content:
-(lib.mudguard_sept_hq = function(mode,startPosition,loop) {
+(lib.mudguard_sept_hq_new = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Calque_1
@@ -137,7 +137,7 @@ lib.ssMetadata = [
 	this.instance_10.parent = this;
 	this.instance_10.setTransform(0,0,0.444,0.444);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},19).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_5}]},1).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_7}]},1).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_9}]},2).to({state:[{t:this.instance_10}]},2).to({state:[{t:this.instance_9}]},19).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_7}]},2).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_5}]},2).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_3}]},2).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_1}]},2).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},10).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_3}]},1).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_5}]},1).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_7}]},1).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_9}]},2).to({state:[{t:this.instance_10}]},2).to({state:[{t:this.instance_9}]},11).to({state:[{t:this.instance_8}]},2).to({state:[{t:this.instance_7}]},2).to({state:[{t:this.instance_6}]},2).to({state:[{t:this.instance_5}]},2).to({state:[{t:this.instance_4}]},2).to({state:[{t:this.instance_3}]},2).to({state:[{t:this.instance_2}]},2).to({state:[{t:this.instance_1}]},2).wait(2));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(400,600,800,1200);
@@ -150,7 +150,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"/wp-content/uploads/2018/07/mudguard_sept_hq_atlas_.png", id:"mudguard_sept_hq_atlas_"}
+		{src:"images/mudguard_sept_hq_new_atlas_.png", id:"mudguard_sept_hq_new_atlas_"}
 	],
 	preloads: []
 };
