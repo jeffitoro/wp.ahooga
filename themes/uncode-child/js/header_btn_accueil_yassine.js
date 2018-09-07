@@ -340,7 +340,7 @@ p.nominalBounds = new cjs.Rectangle(-77,-15,147,147.1);
 
 
 // stage content:
-(lib.header_btn_accueil = function(mode,startPosition,loop) {
+(lib.header_btn_accueil_yassine = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
@@ -379,7 +379,7 @@ p.nominalBounds = new cjs.Rectangle(-77,-15,147,147.1);
 		
 		function click_btn_gauche() {
 			
-			document.location = "http://devahooga.molengeek.com/bike1";
+			document.location = "http://devahooga.molengeek.com/folding-bikes";
 			/*window.open("http://www.adobe.com", "_blank");*/
 		}
 		
@@ -405,7 +405,7 @@ p.nominalBounds = new cjs.Rectangle(-77,-15,147,147.1);
 		
 		function click_btn_droit() {
 			
-			document.location = "http://devahooga.molengeek.com/bike2";
+			document.location = "http://devahooga.molengeek.com/modular-bikes";
 			/*window.open("http://www.adobe.com", "_blank");*/
 		}
 	}
