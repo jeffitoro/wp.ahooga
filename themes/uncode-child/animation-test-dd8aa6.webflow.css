@@ -1,0 +1,43 @@
+.image {
+  position: relative;
+  left: 19px;
+  top: -275px;
+  width: 170px;
+  float: none;
+}
+
+.image-2 {
+  position: relative;
+  left: 28px;
+  bottom: -159px;
+  width: 160px;
+}
+
+.image-3 {
+  position: relative;
+  right: -234px;
+  bottom: -132px;
+  width: 150px;
+}
+
+.section {
+  padding-top: 101px;
+}
+
+.section-2 {
+  width: auto;
+  height: 600px;
+}
+
+.section-3 {
+  height: 600px;
+}
+
+.image-4 {
+  width: 600px;
+}
+
+.column {
+  position: static;
+  display: block;
+}
