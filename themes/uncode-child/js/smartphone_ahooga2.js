@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"smartphone_ahooga1_atlas_", frames: [[1208,0,456,812],[0,1026,1000,262],[0,0,602,1024],[604,0,602,1024]]}
+		{name:"smartphone_ahooga2_atlas_", frames: [[1208,0,456,812],[0,1026,1000,262],[0,0,602,1024],[604,0,602,1024]]}
 ];
 
 
@@ -12,28 +12,28 @@ lib.ssMetadata = [
 
 
 (lib.blanc = function() {
-	this.spriteSheet = ss["smartphone_ahooga1_atlas_"];
+	this.spriteSheet = ss["smartphone_ahooga2_atlas_"];
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.menu2 = function() {
-	this.spriteSheet = ss["smartphone_ahooga1_atlas_"];
+	this.spriteSheet = ss["smartphone_ahooga2_atlas_"];
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.phone_app_ahooga = function() {
-	this.spriteSheet = ss["smartphone_ahooga1_atlas_"];
+	this.spriteSheet = ss["smartphone_ahooga2_atlas_"];
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.shine = function() {
-	this.spriteSheet = ss["smartphone_ahooga1_atlas_"];
+	this.spriteSheet = ss["smartphone_ahooga2_atlas_"];
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
@@ -1232,7 +1232,7 @@ p.nominalBounds = new cjs.Rectangle(-38.3,434.8,177.9,156.9);
 
 
 // stage content:
-(lib.smartphone_ahooga1 = function(mode,startPosition,loop) {
+(lib.smartphone_ahooga2 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Calque_1
@@ -1272,23 +1272,15 @@ p.nominalBounds = new cjs.Rectangle(-38.3,434.8,177.9,156.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
-	// Calque_6
+	// Calque_14
 	this.instance_4 = new lib.blanc();
 	this.instance_4.parent = this;
-	this.instance_4.setTransform(78,132);
+	this.instance_4.setTransform(86,145);
 
-	this.shape = new cjs.Shape();
-	this.shape.graphics.f().s("#FFFFFF").ss(1,1,1).p("EhAEhVUMCAJAAAMAAACqpMiAJAAAg");
-	this.shape.setTransform(302.1,498.1);
-
-	this.shape_1 = new cjs.Shape();
-	this.shape_1.graphics.f("#006666").s().p("EhAEBVVMAAAiqpMCAJAAAMAAACqpg");
-	this.shape_1.setTransform(302.1,498.1);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape},{t:this.instance_4}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(192,476,822.2,1099);
+p.nominalBounds = new cjs.Rectangle(301,551,602,1024);
 // library properties:
 lib.properties = {
 	id: 'F270FD77044444518025757BDCAAF9FB',
@@ -1298,7 +1290,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/smartphone_ahooga1_atlas_.png?1536677555985", id:"smartphone_ahooga1_atlas_"}
+		{src:"images/smartphone_ahooga2_atlas_.png", id:"smartphone_ahooga2_atlas_"}
 	],
 	preloads: []
 };
