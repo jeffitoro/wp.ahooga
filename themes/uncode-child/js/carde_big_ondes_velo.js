@@ -609,7 +609,7 @@ p.nominalBounds = new cjs.Rectangle(-202.9,-119.2,406.9,239.5);
 
 
 // stage content:
-(lib.carde_big_ondes = function(mode,startPosition,loop) {
+(lib.carde_big_ondes2 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Calque_2
